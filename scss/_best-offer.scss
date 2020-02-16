@@ -1,0 +1,18 @@
+section#best-offer {
+  .card--img {
+    img {
+      width: 100%;
+    }
+  }
+  .card--text {
+    background-color: #fff;
+    padding: 15px;
+    .card--title {
+      font-size: 18px;
+      color: #e87c7c;
+    }
+    .card--desc {
+      color: $gray;
+    }
+  }
+}
