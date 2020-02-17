@@ -1,0 +1,16 @@
+#content {
+  .content-block {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    &--title {
+      position: absolute;
+      bottom: 0;
+      background-color: #f9f9fc;
+      text-align: center;
+      padding: .5rem 1rem;
+      font-weight: bold;
+      line-height: 1.4;
+    }
+  }
+}

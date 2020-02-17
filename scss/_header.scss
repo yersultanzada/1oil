@@ -1,0 +1,88 @@
+#header {
+  background-color: $blue;
+  p {
+    margin-bottom: 0;
+  }
+  .block-left {
+    display: flex;
+    align-items: center;
+    .g-social {
+      margin-top: 0;
+      li a {
+        border: 1px solid $white;
+        color: $white;
+        &:hover {
+          background-color: $white;
+          color: $blue;
+        }
+      }
+    }
+  }
+  .block-right {
+    display: flex;
+    &--item {
+      display: flex;
+      align-items: center;
+      img {
+        margin-right: .5rem;
+      }
+      &:first-child {
+        background-color: #f9f9fc;
+        p {
+          color: $black;
+        }
+      }
+      p {
+        color: $white;
+      }
+    }
+  }
+}
+.nav {
+  .upper-nav {
+    a {
+      color: $black;
+      padding-bottom: .5rem;
+      font-weight: bold;
+      &:hover {
+        border-bottom: 2px solid $black;
+      }
+    }
+    .nav-cart {
+      position: relative;
+      img {
+        margin-right: 5px;
+        vertical-align: sub;
+      }
+      .badge {
+        position: absolute;
+        top: -8px;
+        left: 11px;
+        background-color: $blue;
+        color: $white;
+        border-radius: 50%;
+      }
+    }
+  }
+  .main-nav {
+    background-color: #f1efef;
+    box-shadow: 0 4px 2px -2px $gray;
+    a {
+      font-weight: bold;
+      &:hover {
+        color: $blue;
+      }
+      &._sale {
+        color: #de474e;
+        &:hover {
+          color: #de474e;
+        }
+      }
+    }
+    button {
+      background-color: $blue;
+      color: $white;
+      padding: .375rem 1.5rem;
+    }
+  }
+}
