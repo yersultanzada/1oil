@@ -1,0 +1,173 @@
+section#product-card {
+  font-weight: bold;
+  .slider-container {
+    .slider-for {
+      margin: 5px;
+    }
+    .slider-nav {
+      .slick-slide {
+        margin: 5px;
+      }
+      .slick-list {
+        padding: 0 !important;
+      }
+    }
+  }
+  .card-title {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+  .card-type {
+    font-weight: bold;
+  }
+  .card-state {
+    display: flex;
+    align-items: center;
+    &--yes {
+      color: #287621;
+      .round {
+        background-color: #287621;
+      }
+    }
+    &--no {
+      color: #de474e;
+      .round {
+        background-color: #de474e;
+      }
+    }
+    .round {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%
+    }
+  }
+  .card-price {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding-right: 1.75rem;
+    &--old {
+      color: $gray;
+      font-size: 12px;
+      text-decoration: line-through;
+    }
+    &--new {
+      font-size: 18px;
+    }
+    &--per {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: $blue;
+      color: $white;
+      border-radius: 3px;
+      font-size: 10px;
+      padding: 1px 2px;
+      font-weight: 500;
+    }
+  }
+  .card-table {
+    padding: 1rem 0;
+    border-top: 1px solid #c5c5c5;
+    border-bottom: 1px solid #c5c5c5;
+    .clients-discount {
+      color: $blue;
+    }
+  }
+  .card-btn {
+    a {
+      font-weight: bold;
+    }
+    &--count {
+      cursor: default;
+      padding: 12px 20px;
+      button {
+        font-weight: bold;
+        outline: none;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 1px 8px;
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+    &--like {
+      padding: 12px 15px;
+      i {
+        font-size: 18px;
+      }
+      &.active {
+        i.far {
+          font-weight: 700;
+          color: $blue;
+        }
+      }
+    }
+    &--like, &--count {
+      border-color: $gray !important;
+      color: $black !important;
+      &:active,
+      &:focus,
+      &:hover {
+        background-color: transparent !important;
+        border-color: $gray !important;
+        color: $black !important;
+      }
+    }
+  }
+  .card-extra {
+    img {
+      vertical-align: top;
+    }
+    &--desc {
+      font-size: 12px;
+      font-weight: 500;
+      color: $gray;
+    }
+  }
+  .card-details {
+    .nav-tabs {
+      border: none;
+      .nav-link {
+        text-transform: uppercase;
+        padding: .8rem 1.5rem;
+        background-color: transparent;
+        border: none;
+        &.active {
+          color: $blue;
+          background-color: $gray-100;
+        }
+      }
+    }
+    .tab-content {
+      background-color: $gray-100;
+      padding: 1.5rem;
+    }
+    .table {
+      tr {
+        th {
+          border-right: 1px solid #c5c5c5;
+          padding: .5rem 0!important;
+        }
+        td {
+          color: $gray;
+          padding: .5rem!important;
+        }
+        th, td {
+          border-bottom: 1px solid #c5c5c5;
+          border-top: none!important;
+        }
+      }
+      tr:last-child {
+        th, td {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}

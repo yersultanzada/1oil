@@ -1,0 +1,118 @@
+.order-block {
+  &--title {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid #c5c5c5;
+  }
+  &--form {
+    .form-group {
+      margin-bottom: 1.5rem;
+      font-weight: bold;
+      .custom-control {
+        font-weight: normal;
+      }
+    }
+  }
+  &--desc {
+    padding: 1rem;
+    background-color: $gray-100;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    &-title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .left-panel {
+      border-right: 1px solid #c5c5c5;
+      padding-bottom: 100px;
+      input[type="text"] {
+        display: inline-block;
+        width: 200px;
+      }
+    }
+    .right-panel {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      tr {
+        border-bottom: 1px solid #c5c5c5;
+        td {
+          border-bottom: none;
+          text-align: right;
+          padding: 5px 0;
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+  &--btn {
+    display: flex;
+    justify-content: space-between;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background-color: #e5e5e5;
+    padding: 1.5rem 1rem;
+  }
+}
+.checkout-block {
+  &--title {
+    display: flex;
+    border-bottom: 2px solid;
+    padding-bottom: .25rem;
+    padding-right: 3.5rem;
+    p {
+      margin-bottom: 0;
+    }
+  }
+  &--box {
+    display: flex;
+    box-shadow: 0 0 29px 4px rgba(70, 69, 69, 0.1);
+    padding: 1rem 2rem;
+    .checkout-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 140px;
+      box-shadow: 0 0 29px 4px rgba(70, 69, 69, 0.1);
+      padding: .5rem;
+    }
+    .checkout-right-panel {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      flex: 1;
+    }
+    .checkout-details {
+      display: flex;
+      align-items: flex-start;
+      &--title {
+        width: 221px;
+        max-width: 100%;
+        p {
+          margin-bottom: 0;
+        }
+      }
+      &--count .btn-round {
+        width: 16px;
+        height: 16px;
+        line-height: 0;
+        border-radius: 50%;
+        background-color: $blue;
+        color: $white;
+      }
+    }
+    .checkout-btns {
+      display: flex;
+      width: 52%;
+      margin-left: auto;
+      a {
+        color: $blue;
+      }
+    }
+  }
+}

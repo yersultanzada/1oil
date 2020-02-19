@@ -27,11 +27,11 @@ a {
   }
 }
 
-.wt-text-black {
-  color: $black !important;
-}
-.wt-text-gray {
+.g-text-gray {
   color: $gray !important;
+}
+.g-text-blue {
+  color: $blue !important;
 }
 .g-social {
   margin-top: 15px;
@@ -56,6 +56,21 @@ a {
     }
   }
 }
+.item--like {
+  a {
+    cursor: pointer;
+    i {
+      font-size: 18px;
+      color: $gray;
+    }
+    &.active {
+      i.far {
+        font-weight: 700;
+        color: $blue;
+      }
+    }
+  }
+}
 
 h1,
 h2,
@@ -68,70 +83,6 @@ h6 {
 
 section {
   padding: 55px 0;
-  h1.wt-section-heroTitle {
-    font-size: 90px;
-    line-height: 1.22;
-    font-weight: 400;
-    width: 100%;
-    -webkit-text-decoration: none;
-    text-decoration: none;
-    font-style: normal;
-    letter-spacing: -.021em;
-  }
-  h2.wt-section-title {
-    font-size: 26px;
-    line-height: 1.18;
-    font-weight: 700;
-    width: 100%;
-    -webkit-text-decoration: none;
-    text-decoration: none;
-    font-style: normal;
-    letter-spacing: -.021em;
-  }
-  p.wt-section-subtitle {
-    font-size: 20px;
-    line-height: 1.5;
-    font-weight: 400;
-    width: 100%;
-    -webkit-text-decoration: none;
-    text-decoration: none;
-    font-style: normal;
-    letter-spacing: 0;
-  }
-  h3.wt-section-heading {
-    font-size: 26px;
-    line-height: 1.31;
-    font-weight: 700;
-    width: 100%;
-    -webkit-text-decoration: none;
-    text-decoration: none;
-    font-style: normal;
-    letter-spacing: 0;
-  }
-  p.wt-section-subheading {
-    font-size: 22px;
-    line-height: 1.36;
-    font-weight: 400;
-    width: 100%;
-    -webkit-text-decoration: none;
-    text-decoration: none;
-    font-style: normal;
-    letter-spacing: 0;
-  }
-  p.wt-section-text {
-    font-size: 16px;
-    line-height: 1.56;
-    width: 100%;
-    -webkit-text-decoration: none;
-    text-decoration: none;
-    font-style: normal;
-    letter-spacing: 0;
-  }
-  p.wt-section-small-text {
-    font-size: 12px;
-    line-height: 1.67;
-    width: 100%;
-  }
 }
 
 // Button Styles
@@ -139,19 +90,19 @@ section {
   font-size: 14px;
   line-height: 1.2;
 }
-.wt-btn-size-sm {
+.g-btn-size-sm {
   font-size: 12px;
   padding: 8px;
 }
-.wt-btn-size-md {
+.g-btn-size-md {
   padding: 12px 24px;
 }
-.wt-btn-size-xl {
+.g-btn-size-xl {
   font-size: 15px;
   padding: 15px 30px;
 }
 
-.wt-btn-primary {
+.g-btn-primary {
   background-color: $blue;
   border-color: $blue;
   color: white !important;
@@ -167,10 +118,10 @@ section {
     box-shadow: 0 0 0 0.2rem rgba(254, 209, 55,.5) !important;
   }
 }
-.wt-btn-rounded {
+.g-btn-rounded {
   border-radius: 25px;
 }
-.wt-btn-transparent {
+.g-btn-transparent {
   background-color: transparent;
   border-color: $blue;
   color: $blue !important;
@@ -188,24 +139,6 @@ section {
   }
 }
 
-// Media queries
-@media (max-width: 767px) {
-  section {
-    padding: 40px 0;
-  }
-  section h1.wt-section-heroTitle {
-    font-size: 40px;
-  }
-  section h2.wt-section-title {
-    font-size: 26px;
-  }
-  section h3.wt-section-heading {
-    font-size: 20px;
-  }
-  section p.wt-section-subheading {
-    font-size: 18px;
-  }
-}
 @media (min-width: 768px) and (max-width: 991px) {
   .container {
     max-width: 740px;
