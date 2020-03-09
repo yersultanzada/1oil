@@ -7,6 +7,12 @@ section.related-products {
     padding-bottom: .5rem;
     margin-bottom: 1.25rem;
   }
+  #related-products-carousel {
+    .owl-item img {
+      display: inline;
+      width: 70%;
+    }
+  }
   .block-card {
     .card--img {
       position: relative;
@@ -18,6 +24,13 @@ section.related-products {
       img {
         padding: 15px;
       }
+    }
+  }
+}
+@media (max-width: 450px) {
+  #related-products-carousel {
+    .owl-item img {
+      width: 100% !important;
     }
   }
 }

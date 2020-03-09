@@ -79,10 +79,40 @@
         }
       }
     }
-    button {
-      background-color: $blue;
-      color: $white;
-      padding: .375rem 1.5rem;
+    .input-group {
+      .form-control {
+        font-size: 13px;
+      }
+      button {
+        background-color: $blue;
+        color: $white;
+        padding: .375rem 1.5rem;
+      }
+      .search-result {
+        display: none;
+        position: absolute;
+        top: 38px;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        background-color: $white;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+        padding: 5px 0;
+        &--item {
+          a {
+            display: block;
+            padding: 6px 12px;
+            font-weight: normal;
+          }
+        }
+      }
     }
+  }
+}
+
+@media (max-width: 1200px) {
+  nav .main-nav .input-group {
+    margin: 20px auto 0;
+    width: 500px;
   }
 }

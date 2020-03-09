@@ -133,6 +133,8 @@ section#product-card {
   .card-details {
     .nav-tabs {
       border: none;
+      overflow-y: auto;
+      flex-wrap: nowrap;
       .nav-link {
         text-transform: uppercase;
         padding: .8rem 1.5rem;

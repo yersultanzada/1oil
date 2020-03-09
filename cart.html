@@ -26,7 +26,7 @@
 </head>
 
 <body id="page-top">
-<header id="header">
+<header id="header" class="d-none d-lg-block">
     <div class="container">
         <div class="row">
             <div class="col d-flex">
@@ -57,7 +57,7 @@
         </div>
     </div>
 </header>
-<nav class="nav py-4">
+<nav class="nav py-4 d-none d-lg-block">
     <div class="container">
         <div class="row upper-nav">
             <div class="col-lg-4 align-self-center">
@@ -76,26 +76,26 @@
                 <ul class="d-inline-block list-inline mb-0">
                     <li class="list-inline-item"><a href="#" class="mr-4">Войти</a></li>
                     <li class="list-inline-item nav-cart">
-                        <a href="#"><img src="img/header/cart.png" alt="">Корзина</a>
+                        <a href="cart.html"><img src="img/header/cart.png" alt="">Корзина</a>
                         <span class="badge">4</span>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="row main-nav mt-5 py-3">
-            <div class="col-lg-9">
+            <div class="col-xl-9">
                 <div class="d-flex justify-content-around align-items-start">
-                    <a href="" class="mr-3">Моторное <br>масло</a>
-                    <a href="" class="mr-3">Трансмиссионное <br>масло</a>
-                    <a href="" class="mr-3">Гидравлическое <br>масло</a>
-                    <a href="" class="mr-3">Охлаждающая <br>жидкость</a>
+                    <a href="" class="mr-3">Моторное масло</a>
+                    <a href="" class="mr-3">Трансмиссионное масло</a>
+                    <a href="" class="mr-3">Гидравлическое масло</a>
+                    <a href="" class="mr-3">Охлаждающая жидкость</a>
                     <a href="" class="mr-3">Автохимия</a>
-                    <a href="" class="mr-3">Автомобильные <br>фильтры</a>
+                    <a href="" class="mr-3">Автомобильные фильтры</a>
                     <a href="" class="mr-3">Бренды</a>
                     <a href="" class="_sale">Скидки</a>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-xl-3">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Поиск">
                     <div class="input-group-append">
@@ -106,28 +106,211 @@
         </div>
     </div>
 </nav>
+<!-- Mobile sidebar  -->
+<nav id="sidebar">
+    <ul class="components">
+        <li>
+            <a href="#">Новинки</a>
+        </li>
+        <li>
+            <a href="#motorOil" data-toggle="collapse" aria-expanded="false">Моторное масло<i class="fas fa-chevron-down"></i></a>
+            <ul class="collapse" id="motorOil">
+                <li>
+                    <a href="#">HC-синтетическое</a>
+                </li>
+                <li>
+                    <a href="#">Минеральное</a>
+                </li>
+                <li>
+                    <a href="#">Полусинтетическое</a>
+                </li>
+                <li>
+                    <a href="#">Синтетическое</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#transOil" data-toggle="collapse" aria-expanded="false">Трансмиссионное масло<i class="fas fa-chevron-down"></i></a>
+            <ul class="collapse" id="transOil">
+                <li>
+                    <a href="#">Минеральное</a>
+                </li>
+                <li>
+                    <a href="#">Полусинтетическое</a>
+                </li>
+                <li>
+                    <a href="#">Синтетическое</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#hydraOil" data-toggle="collapse" aria-expanded="false">Гидравлическое масло<i class="fas fa-chevron-down"></i></a>
+            <ul class="collapse" id="hydraOil">
+                <li>
+                    <a href="#">Минеральное</a>
+                </li>
+                <li>
+                    <a href="#">Синтетическое</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#cool" data-toggle="collapse" aria-expanded="false">Охлаждающая жидкость<i class="fas fa-chevron-down"></i></a>
+            <ul class="collapse" id="cool">
+                <li>
+                    <a href="#">Гибридный</a>
+                </li>
+                <li>
+                    <a href="#">Карбоксилатный</a>
+                </li>
+                <li>
+                    <a href="#">Традиционный</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#avtoChemistry" data-toggle="collapse" aria-expanded="false">Автохимия<i class="fas fa-chevron-down"></i></a>
+            <ul class="collapse" id="avtoChemistry">
+                <li>
+                    <a href="#">Автошампуни</a>
+                </li>
+                <li>
+                    <a href="#">Стекоомыватели</a>
+                </li>
+                <li>
+                    <a href="#">Диспенсоры</a>
+                </li>
+                <li>
+                    <a href="#">Гигиеническая продукция</a>
+                </li>
+                <li>
+                    <a href="#">Химия</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#filters" data-toggle="collapse" aria-expanded="false">Автомобильные фильтры<i class="fas fa-chevron-down"></i></a>
+            <ul class="collapse" id="filters">
+                <li>
+                    <a href="#">Воздушный</a>
+                </li>
+                <li>
+                    <a href="#">Масляный</a>
+                </li>
+                <li>
+                    <a href="#">Салонный</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" class="g-text-red">Скидки</a>
+        </li>
+        <li>
+            <a href="#">Все акции</a>
+        </li>
+    </ul>
+</nav>
+<div class="mobile-version z-index-100">
+    <div class="mobile-version--header mb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 align-self-center">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item">
+                            <button type="button" id="sidebarCollapse"><i class="fas fa-bars"></i></button>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" id="mobile-version-search-btn"><i class="fas fa-search"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-4 text-center">
+                    <a href="">
+                        <img src="img/logo.png" class="mobile-logo" alt="">
+                    </a>
+                </div>
+                <div class="col-4 text-right align-self-center">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item">
+                            <a href=""><i class="far fa-heart"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href=""><img src="img/mobile/mobile-cart.jpg" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-version-search">
+            <div class="mobile-version-search-field">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Более 1 000 000 товаров">
+                    <div class="input-group-append">
+                        <button class="btn" type="button">Найти</button>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-version-search-result">
+                <div class="mobile-version-search-result--item">
+                    <a href="#">Helix</a>
+                </div>
+                <div class="mobile-version-search-result--item">
+                    <a href="#">Helix</a>
+                </div>
+                <div class="mobile-version-search-result--item">
+                    <a href="#">Helix</a>
+                </div>
+                <div class="mobile-version-search-result--item">
+                    <a href="#">Helix</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-version--nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <ul class="list-inline mb-0 text-center">
+                        <li class="list-inline-item">
+                            <a href="">Статьи</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="">О компании</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="">Как заказать</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="">Бренды</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <section class="order-block">
     <div class="container">
-        <p class="order-block--title mb-5">Оформление заказа</p>
+        <p class="order-block--title mb-sm-5">Оформление заказа</p>
         <div class="row">
-            <div class="col-12 col-md-8">
+            <div class="col-12 col-lg-8">
                 <div class="order-block--form">
                     <div class="form-group row">
                         <label class="col-sm-3 col-form-label">Телефон</label>
-                        <div class="col-sm-6">
+                        <div class="col-sm-9 col-md-6">
                             <input type="tel" class="form-control">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-3 col-form-label">Имя</label>
-                        <div class="col-sm-6">
+                        <div class="col-sm-9 col-md-6">
                             <input type="text" class="form-control">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-3 col-form-label">Электронная почта</label>
-                        <div class="col-sm-6">
+                        <div class="col-sm-9 col-md-6">
                             <input type="email" class="form-control">
                             <div class="custom-control custom-checkbox mt-2">
                                 <input type="checkbox" class="custom-control-input" id="customCheck">
@@ -137,7 +320,7 @@
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-3 col-form-label">Комментарий</label>
-                        <div class="col-sm-6">
+                        <div class="col-sm-9 col-md-6">
                             <textarea class="form-control" rows="4"></textarea>
                         </div>
                     </div>
@@ -148,9 +331,9 @@
                         <div class="col-md-6">
                             <div class="left-panel">
                                 <div class="mb-3">
-                                    <p class="font-weight-bold mb-2">Промокод</p>
-                                    <input type="text" placeholder="Введите промокод" class="form-control mr-3">
-                                    <a href="#" class="btn g-btn-primary g-btn-size-sm">Применить</a>
+                                    <p class="font-weight-bold mb-0">Промокод</p>
+                                    <input type="text" placeholder="Введите промокод" class="form-control mr-3 mt-2">
+                                    <a href="#" class="btn g-btn-primary g-btn-size-sm mt-2">Применить</a>
                                 </div>
                                 <p class="font-weight-bold mb-2">Как вам удобнее оплатить заказ?</p>
                                 <div class="custom-control custom-radio">
@@ -194,7 +377,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-3 offset-md-1">
+            <div class="col-12 col-lg-3 offset-lg-1 mt-5 mt-lg-0">
                 <div class="d-flex align-items-start mb-4">
                     <img class="mr-2" src="img/cart/icon_1.png" alt="">
                     <div>
@@ -235,42 +418,45 @@
         </div>
     </div>
 </section>
-<div class="checkout-block font-weight-bold py-4">
+<section class="checkout-block font-weight-bold">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-8">
+            <div class="col-12 col-xl-8">
                 <div class="checkout-block--title">
-                    <p>1 ТОВАР</p>
-                    <div class="d-flex ml-auto" style="width: 38%">
+                    <div class="col-12 col-lg-7 pl-0">
+                        <p>1 ТОВАР</p>
+                    </div>
+                    <div class="col-12 col-lg-5 d-lg-flex d-none">
                         <p class="g-text-gray">Количество</p>
                         <p class="g-text-gray ml-auto">Цена</p>
                     </div>
                 </div>
-                <div class="checkout-block--box">
-                    <div class="checkout-img mr-2">
+                <div class="checkout-block--box flex-sm-row flex-column mb-4">
+                    <div class="checkout-img">
                         <img src="img/10.jpg" alt="">
                     </div>
                     <div class="checkout-right-panel mt-3">
-                        <div class="checkout-details">
-                            <div class="checkout-details--title mr-5">
+                        <div class="checkout-details flex-column flex-lg-row">
+                            <div class="checkout-details--title col-lg-6 pr-0 pr-lg-5 pl-0 pl-sm-3">
                                 <p>SHELL HELIX ULTRA 5W-40(1л)</p>
-                                <p class="g-text-gray">Моторное синтетическое масло</p>
-                                <p class="g-text-gray">1 литр</p>
+                                <p class="g-text-gray">Моторное синтетическое масло 1 литр</p>
                             </div>
-                            <div class="checkout-details--count">
-                                <span>1</span>
-                                <button class="btn btn-brand btn-round p-0">+</button>
-                            </div>
-                            <div class="checkout-details--price ml-auto">
-                                12 600 тг
+                            <div class="col-lg-6 d-flex flex-lg-row flex-column px-0 px-sm-3">
+                                <div class="checkout-details--count my-2 my-lg-0">
+                                    <span>1</span>
+                                    <button class="btn-round p-0">+</button>
+                                </div>
+                                <div class="checkout-details-price ml-0 ml-lg-auto">
+                                    12 600 тг
+                                </div>
                             </div>
                         </div>
                         <div class="checkout-btns">
-                            <div>
-                                <a href="">Удалить</a>
+                            <div class="mr-3">
+                                <a href=""><i class="far fa-trash-alt mr-2"></i>Удалить</a>
                             </div>
                             <div class="ml-auto">
-                                <a href="">Добавить в корзину</a>
+                                <a href="">Добавить в избранное</a>
                             </div>
                         </div>
                     </div>
@@ -278,7 +464,7 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <!-- Footer -->
 <section id="footer">
@@ -356,15 +542,15 @@
         </div>
     </div>
 </section>
-
+<div class="footer-mobile-caption">
+    интернет-магазин масел и автозапчастей 1oil.kz
+</div>
+<div class="overlay"></div>
+<div class="overlay-for-search"></div>
 
 <!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- Plugin JavaScript -->
-<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyloadxt/1.1.0/jquery.lazyloadxt.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <!-- Custom scripts for this template -->
 <script src="js/project.min.js"></script>
 </body>

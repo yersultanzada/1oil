@@ -1,37 +1,114 @@
-(function($) {
-  "use strict"; // Start of use strict
+$(document).ready(function () {
+  //активация бокового меню в мобилке
+  $('#dismiss, .overlay').on('click', function () {
+    $('#sidebar').removeClass('active');
+    $('.overlay').removeClass('active');
+  });
+  $('#sidebarCollapse').on('click', function () {
+    $('#sidebar').addClass('active');
+    $('.overlay').addClass('active');
+    $('.collapse.in').toggleClass('in');
+    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+  });
+  //активация поиска в мобилке
+  $('.overlay-for-search').on('click', function () {
+    $('.mobile-version-search').removeClass('active');
+    $('.overlay-for-search').removeClass('active');
+  });
+  $('.mobile-version--header a#mobile-version-search-btn').on('click', function () {
+    $('.mobile-version-search').addClass('active');
+    $('.overlay-for-search').addClass('active');
+  });
+  //активация меню в категории
+  $(".catMenu-item").click(function () {
+    if($(this).hasClass('active')){
+      $(this).removeClass('active');
+    }else{
+      $(this).addClass('active');
+    }
 
-  // Smooth scrolling using jQuery easing
-  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: (target.offset().top)
-        }, 1000, "easeInOutExpo");
-        return false;
+    $(".catMenu-item-other").slideToggle('fast');
+    if($(".catMenu-item-other").hasClass('show')){
+      $(".catMenu-item-other").removeClass('show');
+    }else{
+      $(".catMenu-item-other").addClass('show');
+    }
+  });
+  //активация фильтра в категории
+  $('.close-filter, .overlay').on('click', function () {
+    $('#categoryMainFilter').removeClass('active');
+    $('.overlay').removeClass('active');
+    $('body').removeClass('js-no-scroll')
+  });
+  $('#categoryFilterCollapse').on('click', function () {
+    $('#categoryMainFilter').addClass('active');
+    $('.overlay').addClass('active');
+    $('body').addClass('js-no-scroll')
+    $('.collapse.in').toggleClass('in');
+    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+  });
+  //активация подфильтра в категории
+  $('.return-btn, .overlay').on('click', function () {
+    $('.categoryItemFilter').removeClass('active');
+    $('.overlay').removeClass('active');
+  });
+  $('.categoryFilter-items a').on('click', function () {
+    $(this).next().addClass('active');
+    $('.overlay').addClass('active');
+    $('.collapse.in').toggleClass('in');
+    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+  });
+  //карусель для хитов продаж
+  $('#related-products-carousel').owlCarousel({
+    items: 4,
+    loop:true,
+    margin:10,
+    dots: false,
+    autoplay:true,
+    autoplayTimeout:5000,
+    autoplayHoverPause:false,
+    nav:true,
+    navText: [
+      "<i class=\"fas fa-chevron-left\"></i>",
+      "<i class=\"fas fa-chevron-right\"></i>"
+    ],
+    responsive:{
+      0:{
+        items:2,
+        nav:false
+      },
+      900:{
+        items:4
       }
     }
   });
-
-  // Closes responsive menu when a scroll trigger link is clicked
-  $('.js-scroll-trigger').click(function() {
-    $('.navbar-collapse').collapse('hide');
-    $('#menuModal').modal('hide');
+  //выделение сердечки при клике
+  $(".item--like a").on('click', function (){
+    if($(this).hasClass("active")) {
+      $(this).removeClass("active");
+    } else {
+      $(this).addClass("active");
+    }
   });
-
-  $('#menuModal').on('hidden.bs.modal', function (e) {
-      $('body').removeClass('js-no-scroll')
+  //слайдер в карточке товара
+  $('.slider-container').find('.slider-for').slick({
+    lazyLoad: 'ondemand',
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.slider-container .slider-nav'
   });
-  $('#menuModal').on('shown.bs.modal', function (e) {
-      $('body').addClass('js-no-scroll')
+  $('.slider-container').find('.slider-nav').slick({
+    lazyLoad: 'ondemand',
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.slider-container .slider-for',
+    dots: false,
+    centerMode: false,
+    arrows: false,
+    focusOnSelect: true
   });
+});
 
-  // Activate scrollspy to add active class to navbar items on scroll
-  $('body').scrollspy({
-    target: '#mainNav',
-    offset: 56
-  });
 
-})(jQuery); // End of use strict

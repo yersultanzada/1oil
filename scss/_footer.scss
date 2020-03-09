@@ -20,8 +20,19 @@ section#footer {
     }
   }
 }
+.footer-mobile-caption {
+  display: none;
+  background-color: $black;
+  text-align: center;
+  color: $white;
+}
 @media (max-width: 767px) {
   section#footer a.nav-link {
     padding: .5rem 1rem;
+  }
+}
+@media (max-width: 991px) {
+  .footer-mobile-caption {
+    display: block;
   }
 }
