@@ -65,7 +65,7 @@ section#product-card {
       color: $white;
       border-radius: 3px;
       font-size: 10px;
-      padding: 1px 2px;
+      padding: 1px 4px;
       font-weight: 500;
     }
   }
@@ -76,6 +76,9 @@ section#product-card {
     .clients-discount {
       color: $blue;
     }
+  }
+  .card-delivery>p {
+    font-size: 15px;
   }
   .card-btn {
     a {
@@ -133,7 +136,6 @@ section#product-card {
   .card-details {
     .nav-tabs {
       border: none;
-      overflow-y: auto;
       flex-wrap: nowrap;
       .nav-link {
         text-transform: uppercase;
@@ -171,5 +173,10 @@ section#product-card {
         }
       }
     }
+  }
+}
+@media (max-width: 767px) {
+  section#product-card .card-details .nav-tabs {
+    overflow-y: auto;
   }
 }

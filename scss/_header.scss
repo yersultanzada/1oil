@@ -2,6 +2,7 @@
   background-color: $blue;
   p {
     margin-bottom: 0;
+    font-weight: bold;
   }
   .block-left {
     display: flex;
@@ -82,6 +83,7 @@
     .input-group {
       .form-control {
         font-size: 13px;
+        background-color: transparent;
       }
       button {
         background-color: $blue;
@@ -109,7 +111,35 @@
     }
   }
 }
-
+.breadcrumb {
+  padding: 0;
+  background: transparent;
+  a {
+    color: $gray;
+  }
+  .breadcrumb-item.active {
+    color: $gray;
+  }
+}
+.yellow-banner {
+  background-color: #fecb41;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  &--content {
+    margin-left: 20%;
+    span {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    a {
+      margin-left: 30px;
+      font-weight: bold;
+      padding: 5px 25px;
+      border: 1px solid $black;
+      border-radius: 3px;
+    }
+  }
+}
 @media (max-width: 1200px) {
   nav .main-nav .input-group {
     margin: 20px auto 0;

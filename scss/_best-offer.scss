@@ -1,4 +1,35 @@
 section#best-offer {
+  .owl-carousel {
+    position: relative;
+    .owl-nav {
+      display: block;
+      margin-top: 0;
+      .owl-prev, .owl-next {
+        position: absolute;
+        top: 30%;
+        transform: translateY(-30%);
+        margin: 0;
+        padding: 0;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 50px;
+        background: rgba(141,141,141,0.5);
+      }
+      .owl-prev {
+        left: -23px;
+        i {
+          margin-right: 5px;
+        }
+      }
+      .owl-next {
+        right: -23px;
+        i {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
   .best-offer-title {
     font-size: 26px;
     font-weight: bold;
@@ -13,7 +44,7 @@ section#best-offer {
     padding: 15px;
     .card--title {
       font-size: 18px;
-      color: #e87c7c;
+      color: #d92525;
     }
     .card--desc {
       color: $gray;

@@ -82,6 +82,31 @@ $(document).ready(function () {
       }
     }
   });
+  //карусель для лучшие предложения
+  $('#best-offer-carousel').owlCarousel({
+    items: 3,
+    loop:true,
+    margin:30,
+    dots: false,
+    autoplay:true,
+    autoplayTimeout:5000,
+    autoplayHoverPause:false,
+    nav:true,
+    navText: [
+      "<i class=\"fas fa-chevron-left\"></i>",
+      "<i class=\"fas fa-chevron-right\"></i>"
+    ],
+    responsive:{
+      0:{
+        items:2,
+        nav:false
+      },
+      900:{
+        items:3
+      }
+    }
+  });
+
   //выделение сердечки при клике
   $(".item--like a").on('click', function (){
     if($(this).hasClass("active")) {

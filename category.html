@@ -18,6 +18,9 @@
     <!-- Custom fonts -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap&subset=cyrillic" rel="stylesheet">
+    <!-- Plugin CSS -->
+    <link href="vendor/owlCarousel/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="vendor/owlCarousel/css/owl.theme.default.min.css" rel="stylesheet">
     <!-- Custom styles -->
     <link href="css/project.min.css" rel="stylesheet">
 
@@ -100,6 +103,27 @@
                         <button class="btn" type="button"><i class="fas fa-search"></i></button>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="yellow-banner">
+    <div class="yellow-banner--content">
+        <span>Скидки до конца месяца до 80%</span>
+        <a href="#">Автохимия</a>
+        <a href="#">Охлождающие жидкости</a>
+    </div>
+</div>
+<nav aria-label="breadcrumb" class="d-none d-lg-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                    <li class="breadcrumb-item"><a href="#">Моторное масло</a></li>
+                    <li class="breadcrumb-item"><a href="#">Синтетические масла</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Shell Helix</li>
+                </ol>
             </div>
         </div>
     </div>
@@ -298,47 +322,49 @@
                 </div>
                 <div class="col-lg-10 m-lg-auto">
                     <div class="row">
-                        <div class="col-lg-4">
-                            <div class="best-offer--card">
-                                <div class="card--img">
-                                    <img src="img/best-offer-img.jpg" alt="">
-                                </div>
-                                <div class="card--text">
-                                    <div class="card--title">
-                                        Скидки до 80%
+                        <div id="best-offer-carousel" class="owl-carousel owl-theme">
+                            <div class="item">
+                                <div class="best-offer--card">
+                                    <div class="card--img">
+                                        <img src="img/best-offer-img.jpg" alt="">
                                     </div>
-                                    <div class="card--desc">
-                                        +200 позиций масел в акции
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="best-offer--card">
-                                <div class="card--img">
-                                    <img src="img/best-offer-img.jpg" alt="">
-                                </div>
-                                <div class="card--text">
-                                    <div class="card--title">
-                                        Скидки до 80%
-                                    </div>
-                                    <div class="card--desc">
-                                        +200 позиций масел в акции
+                                    <div class="card--text">
+                                        <div class="card--title">
+                                            Скидки до 80%
+                                        </div>
+                                        <div class="card--desc">
+                                            +200 позиций масел в акции
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="best-offer--card">
-                                <div class="card--img">
-                                    <img src="img/best-offer-img.jpg" alt="">
-                                </div>
-                                <div class="card--text">
-                                    <div class="card--title">
-                                        Скидки до 80%
+                            <div class="item">
+                                <div class="best-offer--card">
+                                    <div class="card--img">
+                                        <img src="img/best-offer-img.jpg" alt="">
                                     </div>
-                                    <div class="card--desc">
-                                        +200 позиций масел в акции
+                                    <div class="card--text">
+                                        <div class="card--title">
+                                            Скидки до 80%
+                                        </div>
+                                        <div class="card--desc">
+                                            +200 позиций масел в акции
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="best-offer--card">
+                                    <div class="card--img">
+                                        <img src="img/best-offer-img.jpg" alt="">
+                                    </div>
+                                    <div class="card--text">
+                                        <div class="card--title">
+                                            Скидки до 80%
+                                        </div>
+                                        <div class="card--desc">
+                                            +200 позиций масел в акции
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1901,6 +1927,8 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="vendor/owlCarousel/js/owl.carousel.min.js"></script>
     <!-- Custom scripts -->
     <script src="js/project.min.js"></script>
     <script>

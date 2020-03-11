@@ -14,10 +14,14 @@ section#footer {
       display: inline-block;
       color: $black;
       padding: .2rem 1rem;
+      font-weight: 500;
       &:hover {
         color: $blue;
       }
     }
+  }
+  .footer--address p {
+    font-weight: 500;
   }
 }
 .footer-mobile-caption {

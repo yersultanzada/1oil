@@ -4,6 +4,9 @@ section#category {
     .menu--item {
       display: block;
       width: 200px;
+      .menu--title {
+        font-weight: bold;
+      }
     }
   }
   .title--border {
@@ -14,9 +17,16 @@ section#category {
     font-size: 20px;
     font-weight: bold;
   }
+  .title--count {
+    font-weight: bold;
+  }
   .navigation--up {
     .navigation--title {
       text-transform: uppercase;
+      font-weight: bold;
+    }
+    .custom-control-label {
+      font-weight: bold;
     }
     .custom-control-label::before {
       background-color: transparent;
@@ -34,6 +44,7 @@ section#category {
       a.dropdown-toggle, a.only--sale {
         padding: 5px;
         margin-left: -4px;
+        font-weight: bold;
         &:after {
           content: '';
           background: url(../img/category/filter/filter-arrow-black.svg) 0 3px no-repeat;
@@ -187,6 +198,7 @@ section#category {
     .filter--clear {
       a {
         color: $blue;
+        font-weight: bold;
       }
     }
   }
@@ -201,7 +213,7 @@ section#category {
         background-color: transparent;
         border: none;
         outline: none;
-        padding: 8px 5px;
+        padding: 10px 5px;
         color: $black;
         font-weight: bold;
         line-height: 1.2;
@@ -216,6 +228,7 @@ section#category {
           margin-top: 1px;
           transform: translateY(-50%);
           color: $gray;
+          font-weight: 500;
         }
         &:hover {
           color: $blue;
@@ -242,7 +255,6 @@ section#category {
             position: relative;
             display: block;
             padding: 8px 5px;
-            color: $gray;
             line-height: 1.2;
             .link--text {
               display: block;
@@ -254,7 +266,8 @@ section#category {
               right: 0;
               margin-top: 1px;
               transform: translateY(-50%);
-              color: $gray;
+              color: $black;
+              font-weight: 500;
             }
             &:hover {
               color: $blue;
@@ -280,6 +293,7 @@ section#category {
       padding: 15px;
       border-radius: 3px;
       box-shadow: 0 2px 4px rgba(63,81,181,.06);
+      font-weight: bold;
       .item--img {
         text-align: center;
         padding: 15px;
