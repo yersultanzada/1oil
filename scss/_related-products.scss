@@ -1,13 +1,11 @@
 section.related-products {
-  font-weight: bold;
   .block-title {
-    font-size: 20px;
-    border-bottom: 1px solid #222;
-    text-transform: uppercase;
-    padding-bottom: .5rem;
-    margin-bottom: 1.25rem;
+    margin-bottom: .5rem;
   }
   #related-products-carousel {
+    .item {
+      padding: 20px 10px 0;
+    }
     .owl-item img {
       display: inline;
       width: 70%;
@@ -17,12 +15,45 @@ section.related-products {
     .card--img {
       position: relative;
       background-color: $white;
-      padding: 15px;
-      border-radius: 3px;
-      box-shadow: 0 2px 4px rgba(63,81,181,.06);
+      padding: 50px 15px;
+      border-radius: 1px;
+      box-shadow: 0 .15rem .75rem rgba(0,0,0,.075)!important;
       text-align: center;
-      img {
-        padding: 15px;
+      .sale-percent {
+        position: absolute;
+        left: 8px;
+        bottom: -8px;
+        background-color: #f93c00;
+        font-size: 10px;
+        text-transform: uppercase;
+        padding: 0 4px;
+        color: $white;
+        border-radius: 3px;
+      }
+    }
+    .card--text {
+      margin-top: 10px;
+      .old-price {
+        display: inline-block;
+        color: $gray;
+        font-size: 12px;
+        text-decoration: line-through;
+        margin-right: 5px;
+      }
+      .new-price {
+        display: inline-block;
+        color: #f93c00;
+        font-size: 12px;
+        font-weight: 600;
+      }
+      .price {
+        font-size: 12px;
+        font-weight: 600;
+        color: $black;
+      }
+      .product-title {
+        font-size: 12px;
+        font-weight: 500;
       }
     }
   }
@@ -31,6 +62,142 @@ section.related-products {
   #related-products-carousel {
     .owl-item img {
       width: 100% !important;
+    }
+  }
+}
+
+section.actual-products {
+  .actual-products--img {
+    position: relative;
+    .actual-products--imgEffect {
+      img {
+        width: 100%;
+        height: 430px;
+        object-fit: cover;
+      }
+      &:after {
+        content: '';
+        transition: opacity .2s ease;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.2);
+        opacity: 0;
+      }
+    }
+    .actual-products--btn {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      width: 200px;
+      height: 40px;
+      line-height: 40px;
+      background-color: $white;
+      text-align: center;
+      opacity: 0;
+    }
+    &:hover {
+      .actual-products--imgEffect:after {
+        opacity: 1;
+      }
+      .actual-products--btn {
+        opacity: 1;
+      }
+    }
+  }
+  .actual-products--text {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+section.know-more {
+  .know-more--img {
+    position: relative;
+    .know-more--imgEffect {
+      img {
+        width: 100%;
+        height: 285px;
+        object-fit: cover;
+      }
+      &:after {
+        content: '';
+        transition: opacity .2s ease;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.2);
+        opacity: 0;
+      }
+    }
+    &:hover {
+      .know-more--imgEffect:after {
+        opacity: 1;
+      }
+    }
+  }
+  .know-more--text {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 20px;
+  }
+  .know-more--subtext {
+    color: $gray;
+    margin-top: 5px;
+  }
+}
+section.wide-slider {
+  background-color: #e4e4e4;
+  .owl-carousel {
+    padding: 50px 0;
+    .owl-dots {
+      margin-top: 15px !important;
+      .owl-dot {
+        span {
+          background: transparent;
+          border: 1px solid $black;
+          border-radius: 50%;
+          width: 13px;
+          height: 13px;
+        }
+        &.active span {
+          background: $black;
+        }
+      }
+    }
+    .item {
+      .wide-carousel--imgEffect {
+        img {
+          width: 100%;
+          height: 400px;
+          object-fit: cover;
+        }
+        &:after {
+          content: '';
+          transition: opacity .4s ease;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0,0,0,.2);
+          opacity: 0;
+        }
+      }
+      &:hover {
+        .wide-carousel--imgEffect:after {
+          opacity: 1;
+        }
+      }
     }
   }
 }

@@ -1,27 +1,157 @@
+.email-subscription {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+  .email-subscription--title {
+    font-size: 18px;
+    color: $black;
+    font-weight: 500;
+  }
+  a {
+    color: $blue;
+  }
+  .input-group {
+    max-width: 600px;
+    margin: auto;
+    .form-control {
+      background-color: transparent;
+      border-radius: 4px;
+      font-size: 13px;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+    .btn {
+      border-radius: 4px;
+      padding: 0 30px;
+      font-size: 13px;
+      font-weight: 500;
+      margin-left: 15px;
+    }
+  }
+}
 section#footer {
-  background-color: $gray-100;
-  padding-bottom: 30px;
+  padding: 50px 0;
   .footer--block-title {
-    text-transform: uppercase;
-    font-weight: bold;
-    border-bottom: 1px solid $blue;
-    padding-bottom: 3px;
+    font-weight: 500;
+    margin-bottom: 15px;
   }
   ul.nav {
     display: block;
-    margin-top: 5px;
+    margin-top: 15px;
+    .nav-item:first-child {
+      position: relative;
+      a.nav-link:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 4px;
+        height: 4px;
+        background-color: #2796FF;
+        border-radius: 50%;
+      }
+    }
     a.nav-link {
       display: inline-block;
-      color: $black;
+      color: #888;
       padding: .2rem 1rem;
-      font-weight: 500;
       &:hover {
-        color: $blue;
+        color: $black;
       }
     }
   }
-  .footer--address p {
-    font-weight: 500;
+  .footer--column-item {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+  }
+  .footer--social {
+    .footer--column-item {
+      width: 30px;
+      height: 30px;
+    }
+    .footer--social-item_fb {
+      background: url(/img/footer/facebook.svg);
+      &:hover {
+        background: url(/img/footer/facebook_hover.svg);
+      }
+    }
+    .footer--social-item_vk {
+      background: url(/img/footer/vk.svg);
+      &:hover {
+        background: url(/img/footer/vk_hover.svg);
+      }
+    }
+    .footer--social-item_tw {
+      background: url(/img/footer/twitter.svg);
+      &:hover {
+        background: url(/img/footer/twitter_hover.svg);
+      }
+    }
+    .footer--social-item_youtube {
+      background: url(/img/footer/youtube.svg);
+      &:hover {
+        background: url(/img/footer/youtube_hover.svg);
+      }
+    }
+    .footer--social-item_inst {
+      background: url(/img/footer/instagram.svg);
+      &:hover {
+        background: url(/img/footer/instagram_hover.svg);
+      }
+    }
+  }
+  .footer--payment {
+    .footer--payment-mastercard {
+      width: 43px;
+      height: 35px;
+      background: url(/img/footer/mastercard.svg);
+    }
+    .footer--payment-visa {
+      width: 49px;
+      height: 16px;
+      background: url(/img/footer/visa.svg);
+    }
+    div {
+      line-height: 1.2;
+      a {
+        text-decoration: underline;
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+  }
+  .footer--app {
+    .footer--appstore {
+      background: url(/img/footer/appstore.svg);
+      width: 100px;
+      height: 29px;
+    }
+    .footer--googleplay {
+      background: url(/img/footer/googleplay.svg);
+      width: 100px;
+      height: 29px;
+    }
+  }
+  .footer--contacts {
+    .footer--contacts-tel {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 500;
+      vertical-align: middle;
+      border: 1px solid $black;
+      border-radius: 4px;
+      text-align: center;
+      padding: 12px 34px;
+      margin-bottom: 15px;
+    }
+    p {
+      font-weight: 500;
+    }
   }
 }
 .footer-mobile-caption {
@@ -30,13 +160,23 @@ section#footer {
   text-align: center;
   color: $white;
 }
-@media (max-width: 767px) {
-  section#footer a.nav-link {
-    padding: .5rem 1rem;
+@media (max-width: 1199px) {
+  section#footer .col {
+    max-width: 25%;
+    flex-basis: auto;
+    margin-bottom: 15px;
   }
 }
 @media (max-width: 991px) {
   .footer-mobile-caption {
     display: block;
+  }
+  section#footer .col {
+    max-width: 33%;
+  }
+}
+@media (max-width: 767px) {
+  section#footer a.nav-link {
+    padding: .5rem 1rem;
   }
 }

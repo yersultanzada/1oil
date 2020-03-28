@@ -1,31 +1,120 @@
 #content {
+  padding: 0;
+  .main-carousel {
+    .owl-dots {
+      margin-top: 0;
+      .owl-dot {
+        span {
+          background: transparent;
+          border: 1px solid $black;
+          border-radius: 50%;
+          width: 13px;
+          height: 13px;
+        }
+        &.active span {
+          background: $black;
+        }
+      }
+    }
+  }
+  .actual-carousel {
+    position: relative;
+    .item {
+      img {
+        width: 85px;
+        height: 85px;
+        border: 1px solid $black;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: auto;
+      }
+    }
+    .owl-nav {
+      display: block;
+      margin-top: 0;
+      .owl-prev, .owl-next {
+        position: absolute;
+        top: 40%;
+        transform: translateY(-40%);
+        margin: 0;
+        padding: 0;
+        color: $black;
+        background: transparent;
+      }
+      .owl-prev {
+        left: 0;
+      }
+      .owl-next {
+        right: 0;
+      }
+    }
+  }
+  .actual-title {
+    font-size: 18px;
+    font-weight: 500;
+  }
   .content-block {
     position: relative;
-    margin: 15px 0;
+    padding-bottom: 50px;
     &.big-img-block {
       img {
-        max-height: 548px;
+        width: 610px;
+        height: 508px;
+        object-fit: cover;
+      }
+      .content-block--text {
+        width: 346px;
+      }
+    }
+    &.small-img-block {
+      img {
+        width: 290px;
+        height: 250px;
         object-fit: cover;
       }
     }
-    img {
-      width: 100%;
-    }
-    &--title {
+    &--text {
       position: absolute;
-      bottom: 0;
+      bottom: 7px;
       left: 50%;
       transform: translateX(-50%);
-      background-color: #f9f9fc;
+      background-color: $white;
+      width: 250px;
+      margin: auto;
       text-align: center;
-      padding: .5rem 1rem;
-      font-weight: bold;
-      line-height: 1.4;
+      padding: 16px;
+      font-weight: 500;
+      line-height: 1.2;
+      .content-block--title {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
     }
   }
-  .content-banner {
-    img {
-      width: 100%;
-    }
+}
+
+section.seo-text {
+  .seo-text--title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .seo-text--itemTitle {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+}
+@media (min-width: 1200px) {
+  #content .content-block.big-img-block img {
+    width: 797px;
+    height: 548px;
+  }
+  #content .content-block.small-img-block img {
+    width: 383px;
+    height: 268px;
+  }
+  #content .content-block--text {
+    width: 346px;
   }
 }

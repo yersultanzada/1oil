@@ -43,7 +43,7 @@ $(document).ready(function () {
   $('#categoryFilterCollapse').on('click', function () {
     $('#categoryMainFilter').addClass('active');
     $('.overlay').addClass('active');
-    $('body').addClass('js-no-scroll')
+    $('body').addClass('js-no-scroll');
     $('.collapse.in').toggleClass('in');
     $('a[aria-expanded=true]').attr('aria-expanded', 'false');
   });
@@ -60,9 +60,8 @@ $(document).ready(function () {
   });
   //карусель для хитов продаж
   $('#related-products-carousel').owlCarousel({
-    items: 4,
+    items: 6,
     loop:true,
-    margin:10,
     dots: false,
     autoplay:true,
     autoplayTimeout:5000,
@@ -78,7 +77,7 @@ $(document).ready(function () {
         nav:false
       },
       900:{
-        items:4
+        items:6
       }
     }
   });
@@ -88,14 +87,10 @@ $(document).ready(function () {
     loop:true,
     margin:30,
     dots: false,
-    autoplay:true,
+    autoplay:false,
     autoplayTimeout:5000,
     autoplayHoverPause:false,
-    nav:true,
-    navText: [
-      "<i class=\"fas fa-chevron-left\"></i>",
-      "<i class=\"fas fa-chevron-right\"></i>"
-    ],
+    nav:false,
     responsive:{
       0:{
         items:2,
@@ -106,7 +101,52 @@ $(document).ready(function () {
       }
     }
   });
-
+  //карусель для главной
+  $('.main-carousel').owlCarousel({
+    items: 1,
+    loop:true,
+    margin:10,
+    dots: true,
+    autoplay:true,
+    autoplayTimeout:5000,
+    autoplayHoverPause:false,
+    nav:false
+  });
+//карусель на главном актуальные
+  $('.actual-carousel').owlCarousel({
+    items: 6,
+    loop:true,
+    margin:30,
+    dots: false,
+    autoplay:false,
+    autoplayTimeout:5000,
+    autoplayHoverPause:false,
+    nav:true,
+    navText: [
+      "<i class=\"fas fa-chevron-left\"></i>",
+      "<i class=\"fas fa-chevron-right\"></i>"
+    ],
+    responsive:{
+      0:{
+        items:3,
+        nav:false
+      },
+      900:{
+        items:6
+      }
+    }
+  });
+  //карусель для главной широкий
+  $('#wide-carousel').owlCarousel({
+    items: 1,
+    loop:true,
+    margin:10,
+    dots: true,
+    autoplay:true,
+    autoplayTimeout:5000,
+    autoplayHoverPause:false,
+    nav:false
+  });
   //выделение сердечки при клике
   $(".item--like a").on('click', function (){
     if($(this).hasClass("active")) {

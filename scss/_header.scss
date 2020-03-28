@@ -1,9 +1,5 @@
 #header {
   background-color: $blue;
-  p {
-    margin-bottom: 0;
-    font-weight: bold;
-  }
   .block-left {
     display: flex;
     align-items: center;
@@ -21,33 +17,103 @@
   }
   .block-right {
     display: flex;
+    margin-left: auto;
     &--item {
+      position: relative;
       display: flex;
       align-items: center;
-      img {
-        margin-right: .5rem;
-      }
-      &:first-child {
-        background-color: #f9f9fc;
-        p {
-          color: $black;
+      button {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        height: 37px;
+        font-weight: 500;
+        font-size: 12px;
+        padding: .3rem 1rem;
+        color: $white;
+        cursor: pointer;
+        &:before {
+          content: "";
+          display: inline-block;
+          margin-right: 5px;
+          vertical-align: middle;
+        }
+        &.btn-1:before {
+          width: 12px;
+          height: 18px;
+          margin-bottom: 4px;
+          background: url("../img/header/h_icon-2.png");
+        }
+        &.btn-2:before {
+          width: 27px;
+          height: 28px;
+          background: url("../img/header/h_icon-1.png");
+        }
+        &.btn-3:before {
+          width: 21px;
+          height: 21px;
+          margin-bottom: 2px;
+          background: url("../img/header/h_icon-3.png");
         }
       }
-      p {
-        color: $white;
+      .btn-content {
+        display: none;
+        position: absolute;
+        top: 37px;
+        right: 0;
+        z-index: 10;
+        background-color: $white;
+        padding: 15px;
+        margin-top: 0;
+        width: 300px;
+        font-size: 12px;
+        color: $black;
+        box-shadow: 0px 0px 7.68px 0.32px rgba(92, 92, 92, 0.59);
+        border: none;
+        border-radius: 0;
+        .item--action {
+          display: block;
+          margin-top: 10px;
+          color: $blue;
+        }
+      }
+      &:hover {
+        background-color: #ffd200;
+        button {
+          color: $black;
+          &.btn-1:before {
+            background: url("../img/header/h_icon-2-b.png");
+          }
+          &.btn-2:before {
+            background: url("../img/header/h_icon-1-b.png");
+          }
+          &.btn-3:before {
+            background: url("../img/header/h_icon-3-b.png");
+          }
+        }
+        .btn-content {
+          display: block;
+        }
       }
     }
   }
 }
 .nav {
   .upper-nav {
+    .list-inline-item:not(:last-child) {
+      margin-right: 1rem;
+    }
     a {
       color: $black;
       padding-bottom: .5rem;
-      font-weight: bold;
+      font-weight: 500;
       &:hover {
         border-bottom: 2px solid $black;
       }
+    }
+    .text-right a:hover {
+      border-bottom: none;
+      color: $blue;
     }
     .nav-cart {
       position: relative;
@@ -66,17 +132,18 @@
     }
   }
   .main-nav {
-    background-color: $gray-100;
-    box-shadow: 0 4px 2px -2px $gray;
     a {
-      font-weight: bold;
+      display: inline-block;
+      max-width: 136px;
+      font-weight: 500;
+      vertical-align: text-top;
       &:hover {
         color: $blue;
       }
       &._sale {
-        color: #de474e;
+        color: $red;
         &:hover {
-          color: #de474e;
+          color: $red;
         }
       }
     }
@@ -84,11 +151,19 @@
       .form-control {
         font-size: 13px;
         background-color: transparent;
+        height: calc(2rem + 2px);
+        border-radius: .15rem;
+        &:focus {
+          box-shadow: none;
+        }
       }
       button {
         background-color: $blue;
         color: $white;
         padding: .375rem 1.5rem;
+        &:focus {
+          box-shadow: none;
+        }
       }
       .search-result {
         display: none;

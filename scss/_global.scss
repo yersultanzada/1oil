@@ -2,7 +2,7 @@
 body {
   overflow-x: hidden;
   color: $black;
-  background-color: #f9f9fc;
+  background-color: $white;
   font-size: 13px;
   line-height: 1.8;
   @include montserrat-font;
@@ -26,7 +26,11 @@ a {
     text-decoration: none;
   }
 }
-
+.block-title {
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
 .g-text-gray {
   color: $gray !important;
 }
@@ -85,7 +89,7 @@ h6 {
 }
 
 section {
-  padding: 55px 0;
+  padding: 35px 0;
 }
 
 // Button Styles
@@ -118,7 +122,7 @@ section {
   }
   &:active,
   &:focus {
-    box-shadow: 0 0 0 0.2rem rgba(254, 209, 55,.5) !important;
+    box-shadow: none;
   }
 }
 .g-btn-rounded {
@@ -138,7 +142,7 @@ section {
   }
   &:active,
   &:focus {
-    box-shadow: 0 0 0 0.2rem rgba(254, 209, 55,.5) !important;
+    box-shadow: none;
   }
 }
 

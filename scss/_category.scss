@@ -3,21 +3,22 @@ section#category {
     display: flex;
     .menu--item {
       display: block;
-      width: 200px;
+      margin-right: 50px;
+      .menu--img {
+        img {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
       .menu--title {
-        font-weight: bold;
+        font-weight: 500;
       }
     }
   }
-  .title--border {
-    border-bottom: 2px solid $black;
-    padding-bottom: 10px;
-  }
   .category--title {
     font-size: 20px;
-    font-weight: bold;
-  }
-  .title--count {
     font-weight: bold;
   }
   .navigation--up {
@@ -40,11 +41,11 @@ section#category {
   .category--filter {
     .filter--item {
       display: inline-block;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
       a.dropdown-toggle, a.only--sale {
+        border: 1px solid $black;
+        border-radius: 3px;
         padding: 5px;
-        margin-left: -4px;
-        font-weight: bold;
         &:after {
           content: '';
           background: url(../img/category/filter/filter-arrow-black.svg) 0 3px no-repeat;
@@ -57,6 +58,7 @@ section#category {
         }
         &:hover {
           background-color: $blue;
+          border-color: $blue;
           color: $white;
           border-radius: 3px;
           &:after {
@@ -65,14 +67,8 @@ section#category {
         }
       }
       a.only--sale {
-        border: 1px solid $black;
-        border-radius: 3px;
-        margin-left: 0;
         &:after {
           display: none;
-        }
-        &:hover {
-          border: none;
         }
       }
       .dropdown-menu {
@@ -170,7 +166,7 @@ section#category {
           }
         }
         &[aria-labelledby=filter-sort] {
-          left: -50% !important;
+          left: -30% !important;
         }
         &[aria-labelledby=filter-brand] {
           left: -120% !important;
@@ -185,26 +181,54 @@ section#category {
           left: -20% !important;
         }
         &[aria-labelledby=filter-volume] {
-          left: -50% !important;
+          left: -100% !important;
         }
-        &[aria-labelledby=filter-oil] {
-          left: -90% !important;
-        }
-        &[aria-labelledby=filter-type] {
+        &[aria-labelledby=filter-class] {
           left: -110% !important;
         }
+        &[aria-labelledby=filter-sae] {
+          left: -140% !important;
+        }
+        &[aria-labelledby=filter-season] {
+          left: -140% !important;
+        }
+        &[aria-labelledby=filter-allow] {
+          left: -120% !important;
+        }
+        &[aria-labelledby=filter-auto] {
+          left: -70% !important;
+        }
+        &[aria-labelledby=filter-type] {
+          left: -30% !important;
+        }
+        &[aria-labelledby=filter-api] {
+          left: -170% !important;
+        }
+      }
+    }
+    .filter--under {
+      display: inline-block;
+      vertical-align: text-top;
+      .custom-control-label::before {
+        background-color: transparent;
+        border: 1px solid $blue;
+        border-radius: .25rem;
+      }
+      .custom-control-input:checked~.custom-control-label::before {
+        color: #fff;
+        background-color: $blue;
       }
     }
     .filter--clear {
       a {
+        font-size: 12px;
         color: $blue;
-        font-weight: bold;
+        font-weight: 500;
       }
     }
   }
   .sidenav--navigation {
     .sidenav--item {
-      border-bottom: 1px solid $gray;
       button.sidenav--link {
         position: relative;
         display: block;
@@ -215,18 +239,14 @@ section#category {
         outline: none;
         padding: 10px 5px;
         color: $black;
-        font-weight: bold;
+        font-weight: 500;
         line-height: 1.2;
+        font-size: 12px;
         .link--text {
-          display: block;
           max-width: 170px;
+          margin-right: 3px;
         }
         .badge {
-          position: absolute;
-          top: 50%;
-          right: 0;
-          margin-top: 1px;
-          transform: translateY(-50%);
           color: $gray;
           font-weight: 500;
         }
@@ -239,34 +259,30 @@ section#category {
         }
       }
       button.sidenav--link[aria-expanded=true] {
-        background-color: $blue;
+        background-color: $black;
         color: $white;
         border-radius: 3px;
         .badge {
-          color: $white;
+          color: $gray;
         }
       }
       ul.sidenav--sub-items {
         list-style-type: none;
-        padding-left: 0;
+        padding-left: 10px;
         margin-bottom: 0;
         li {
           a {
             position: relative;
             display: block;
             padding: 8px 5px;
+            font-size: 12px;
             line-height: 1.2;
             .link--text {
-              display: block;
               max-width: 170px;
+              margin-right: 3px;
             }
             .badge {
-              position: absolute;
-              top: 50%;
-              right: 0;
-              margin-top: 1px;
-              transform: translateY(-50%);
-              color: $black;
+              color: $gray;
               font-weight: 500;
             }
             &:hover {
@@ -275,7 +291,7 @@ section#category {
           }
           &.active {
             a {
-              background-color: $blue;
+              background-color: $black;
               color: $white;
               border-radius: 3px;
               .badge {
@@ -289,21 +305,21 @@ section#category {
   }
   .category--items {
     .category-item--card {
-      background-color: $white;
-      padding: 15px;
+      position: relative;
       border-radius: 3px;
-      box-shadow: 0 2px 4px rgba(63,81,181,.06);
-      font-weight: bold;
+      padding: 8px;
+      border: 1px solid transparent;
       .item--img {
         text-align: center;
-        padding: 15px;
-        margin-bottom: 15px;
+        padding: 50px 30px;
+        background-color: #fafafa;
         img {
           width: 140px;
         }
       }
       .item--title {
         color: $black;
+        font-weight: 500;
         a {
           color: $black;
         }
@@ -315,12 +331,21 @@ section#category {
       .item--price {
         font-size: 18px;
         font-weight: bold;
+        margin-top: 8px;
+        margin-bottom: 10px;
       }
-      .item--buy {
-        text-align: right;
+      .item--more {
+        display: none;
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
       }
       &:hover {
-        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+        border: 1px solid #dfdddd;
+        .item--more {
+          display: block;
+        }
       }
     }
     ul.pagination {
