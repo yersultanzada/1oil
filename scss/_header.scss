@@ -128,22 +128,102 @@
         background-color: $blue;
         color: $white;
         border-radius: 50%;
+        font-weight: 500;
       }
     }
   }
   .main-nav {
-    a {
-      display: inline-block;
-      max-width: 136px;
-      font-weight: 500;
-      vertical-align: text-top;
+    margin-top: 36px;
+    a._sale {
+      color: $red;
+      margin-right: 0;
       &:hover {
-        color: $blue;
-      }
-      &._sale {
         color: $red;
+      }
+    }
+    &--dropdown {
+      display: inline-block;
+      height: 50px;
+      &:not(:first-child) {
+        margin-left: -4px;
+      }
+      &>a {
+        display: inline-block;
+        max-width: 136px;
+        font-weight: 500;
+        vertical-align: text-top;
+        margin-right: 1.2rem;
         &:hover {
-          color: $red;
+          color: $blue;
+        }
+      }
+      .main-nav--dropdown-content {
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: -15px;
+        z-index: 10;
+        width: 1270px;
+        height: 420px;
+        padding: 35px 30px;
+        background-color: $white;
+        box-shadow: 0px 0px 16.32px 7.68px rgba(118, 118, 118, 0.21);
+        .main-nav--dropdown-wrap {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 25px;
+          .main-nav--dropdown-items {
+            .main-nav--dropdown-link {
+              display: inline-block;
+              width: 135px;
+              text-align: center;
+              vertical-align: text-top;
+              margin-right: 30px;
+              margin-bottom: 15px;
+              img {
+                width: 85px;
+                height: 85px;
+                border-radius: 50%;
+                object-fit: cover;
+              }
+              .main-nav--dropdown-title {
+                margin-top: 1rem;
+              }
+              &>a:hover {
+                .main-nav--dropdown-title {
+                  color: $blue;
+                }
+              }
+            }
+            .main-nav--dropdown-link_brands {
+              width: 225px;
+              float: left;
+              a {
+                display: inline-block;
+                margin-bottom: 10px;
+                &:hover {
+                  color: $blue;
+                }
+              }
+            }
+          }
+          .main-nav--dropdown-img {
+            img {
+              width: 300px;
+              height: 300px;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+      &:hover {
+        cursor: pointer;
+        &>a {
+          color: $blue;
+        }
+        .main-nav--dropdown-content {
+          display: block;
         }
       }
     }
@@ -215,9 +295,25 @@
     }
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
+  .nav .main-nav--dropdown .main-nav--dropdown-content {
+    width: 1210px;
+    left: 15px;
+  }
+}
+@media (max-width: 1240px) {
+  .nav .main-nav--dropdown .main-nav--dropdown-content {
+    width: 1190px;
+    left: 1%;
+  }
+}
+@media (max-width: 1199px) {
   nav .main-nav .input-group {
     margin: 20px auto 0;
     width: 500px;
+  }
+  .nav .main-nav--dropdown .main-nav--dropdown-content {
+    width: 960px;
+    left: 0;
   }
 }

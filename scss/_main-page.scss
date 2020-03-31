@@ -28,6 +28,14 @@
         object-fit: cover;
         margin: auto;
       }
+      .actual-item--title {
+        margin-top: 1rem;
+      }
+      a:hover {
+        .actual-item--title {
+          color: $blue;
+        }
+      }
     }
     .owl-nav {
       display: block;
@@ -53,6 +61,11 @@
     font-size: 18px;
     font-weight: 500;
   }
+  a:hover {
+    .small-img-block:after, .big-img-block:after {
+      opacity: 1;
+    }
+  }
   .content-block {
     position: relative;
     padding-bottom: 50px;
@@ -61,6 +74,17 @@
         width: 610px;
         height: 508px;
         object-fit: cover;
+      }
+      &:after {
+        content: '';
+        transition: opacity .2s ease;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 508px;
+        background-color: rgba(0,0,0,.2);
+        opacity: 0;
       }
       .content-block--text {
         width: 346px;
@@ -72,6 +96,17 @@
         height: 250px;
         object-fit: cover;
       }
+      &:after {
+        content: '';
+        transition: opacity .2s ease;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 250px;
+        background-color: rgba(0,0,0,.2);
+        opacity: 0;
+      }
     }
     &--text {
       position: absolute;
@@ -79,6 +114,7 @@
       left: 50%;
       transform: translateX(-50%);
       background-color: $white;
+      z-index: 4;
       width: 250px;
       margin: auto;
       text-align: center;
@@ -106,15 +142,30 @@ section.seo-text {
   }
 }
 @media (min-width: 1200px) {
-  #content .content-block.big-img-block img {
-    width: 797px;
-    height: 548px;
+  #content .content-block.big-img-block {
+    img {
+      width: 797px;
+      height: 548px;
+    }
+    &:after {
+      height: 548px;
+    }
   }
-  #content .content-block.small-img-block img {
-    width: 383px;
-    height: 268px;
+  #content .content-block.small-img-block {
+    img {
+      width: 383px;
+      height: 268px;
+    }
+    &:after {
+      height: 268px;
+    }
   }
   #content .content-block--text {
     width: 346px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1240px){
+  #content .content-block.small-img-block img {
+    width: 374px;
   }
 }
