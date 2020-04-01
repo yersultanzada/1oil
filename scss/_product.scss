@@ -1,26 +1,71 @@
 section#product-card {
-  font-weight: bold;
-  .slider-container {
-    .slider-for {
-      margin: 5px;
-    }
-    .slider-nav {
-      .slick-slide {
-        margin: 5px;
+  font-weight: 500;
+  .product-carousel {
+    .item {
+      img {
+        width: 450px;
+        height: 660px;
+        object-fit: cover;
       }
-      .slick-list {
-        padding: 0 !important;
+    }
+    .owl-dots {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      padding-bottom: 7px;
+      .owl-dot {
+        vertical-align: middle;
+        span {
+          width: 4px;
+          height: 4px;
+          background-color: $gray;
+        }
+        &.active {
+          span {
+            width: 6px;
+            height: 6px;
+            background-color: $black;
+          };
+        }
+      }
+    }
+    .owl-nav {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 0;
+      padding: 0 10px;
+      background-color: rgba(162, 162, 162, 0.3);
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      .owl-prev, .owl-next {
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+        i {
+          font-size: 17px;
+          color: $gray;
+        }
+      }
+      .owl-prev {
+        margin-right: 40px;
+      }
+      .owl-next {
+        margin-left: 40px;
       }
     }
   }
   .card-title {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 17px;
+    line-height: 1.4;
+    font-weight: 500;
     text-transform: uppercase;
     margin-bottom: 0;
   }
   .card-type {
-    font-weight: bold;
+    margin-top: 5px;
   }
   .card-state {
     display: flex;
@@ -50,7 +95,6 @@ section#product-card {
     width: fit-content;
     padding-right: 1.75rem;
     &--old {
-      color: $gray;
       font-size: 12px;
       text-decoration: line-through;
     }
@@ -65,11 +109,11 @@ section#product-card {
       color: $white;
       border-radius: 3px;
       font-size: 10px;
-      padding: 1px 4px;
+      padding: 1px 5px;
       font-weight: 500;
     }
   }
-  .card-table {
+  .card-priceTable {
     padding: 1rem 0;
     border-top: 1px solid #c5c5c5;
     border-bottom: 1px solid #c5c5c5;
@@ -77,16 +121,97 @@ section#product-card {
       color: $blue;
     }
   }
-  .card-delivery>p {
-    font-size: 15px;
+  .card-delivery {
+    p {
+      font-size: 15px;
+      margin: 16px 0 10px;
+    }
+    &--item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 16px;
+      line-height: 1.4;
+      img {
+        margin-right: 8px;
+      }
+    }
+  }
+  .card-brandLink {
+    position: relative;
+    padding: 10px 0 25px 0;
+    border-top: 1px solid #c5c5c5;
+    border-bottom: 1px solid #c5c5c5;
+    a {
+      display: block;
+      color: $blue;
+      &:hover {
+        color: darken($blue, 10%);
+      }
+      &:first-child {
+        margin-bottom: 5px;
+      }
+    }
+    a.card-brandLink--img {
+      position: absolute;
+      top: -10px;
+      right: 10px;
+      padding: 5px;
+      border: 1px solid #c5c5c5;
+      background-color: $white;
+      img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+      }
+    }
+  }
+  .card-desc {
+    padding: 10px 0;
+    border-bottom: 1px solid #c5c5c5;
+    &--title {
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+    &--text {
+      margin-bottom: 3px;
+      span:first-child {
+        margin-right: 3px;
+      }
+      &.hidden {
+        display: none;
+      }
+    }
+    &--btn {
+      color: $blue;
+      margin-top: 5px;
+      &:hover {
+        color: darken($blue, 10%);
+        cursor: pointer;
+      }
+    }
   }
   .card-btn {
+    padding: 16px 0 48px 0;
     a {
-      font-weight: bold;
+      font-weight: 500;
+      border-radius: 3px;
+      &:first-child {
+        margin-right: 24px;
+      }
     }
     &--count {
       cursor: default;
       padding: 12px 20px;
+      border-color: $gray !important;
+      color: $black !important;
+      &:active,
+      &:focus,
+      &:hover {
+        background-color: transparent !important;
+        border-color: $gray !important;
+        color: $black !important;
+      }
       button {
         font-weight: bold;
         outline: none;
@@ -99,41 +224,43 @@ section#product-card {
         }
       }
     }
-    &--like {
-      padding: 12px 15px;
-      i {
-        font-size: 18px;
+  }
+  .card-extra {
+    padding: 10px 0;
+    border-bottom: 1px solid #c5c5c5;
+    &--item {
+      img {
+        vertical-align: top;
       }
-      &.active {
-        i.far {
-          font-weight: 700;
-          color: $blue;
+      p {
+        font-size: 12px;
+        font-weight: 500;
+      }
+      &:last-child {
+        p {
+          color: $gray;
+          font-style: italic;
+          margin-top: 10px;
         }
       }
     }
-    &--like, &--count {
-      border-color: $gray !important;
-      color: $black !important;
-      &:active,
-      &:focus,
-      &:hover {
-        background-color: transparent !important;
-        border-color: $gray !important;
-        color: $black !important;
-      }
-    }
   }
-  .card-extra {
-    img {
-      vertical-align: top;
+  .card-social {
+    margin-top: 10px;
+    &--title {
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-bottom: 5px;
     }
-    &--desc {
-      font-size: 12px;
-      font-weight: 500;
-      color: $gray;
+    .footer--column-item {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      vertical-align: middle;
     }
   }
   .card-details {
+    margin-top: 30px;
     .nav-tabs {
       border: none;
       flex-wrap: nowrap;
@@ -142,6 +269,7 @@ section#product-card {
         padding: .8rem 1.5rem;
         background-color: transparent;
         border: none;
+        border-radius: .25rem;
         &.active {
           color: $blue;
           background-color: $gray-100;
@@ -149,7 +277,6 @@ section#product-card {
       }
     }
     .tab-content {
-      background-color: $gray-100;
       padding: 1.5rem;
     }
     .table {
@@ -173,6 +300,20 @@ section#product-card {
         }
       }
     }
+  }
+}
+@media (max-width: 1350px) {
+  section#product-card .card-btn .d-flex {
+    flex-wrap: wrap;
+    a:first-child {
+      margin-bottom: 15px;
+    }
+  }
+}
+@media (max-width: 1199px) {
+  section#product-card .product-carousel .item img {
+    width: 305px;
+    height: 450px;
   }
 }
 @media (max-width: 767px) {

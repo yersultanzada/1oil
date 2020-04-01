@@ -171,9 +171,9 @@
         .main-nav--dropdown-wrap {
           display: flex;
           justify-content: space-between;
-          align-items: center;
           margin-top: 25px;
           .main-nav--dropdown-items {
+            align-self: center;
             .main-nav--dropdown-link {
               display: inline-block;
               width: 135px;

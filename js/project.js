@@ -59,7 +59,7 @@ $(document).ready(function () {
     $('a[aria-expanded=true]').attr('aria-expanded', 'false');
   });
   //карусель для хитов продаж
-  $('#related-products-carousel').owlCarousel({
+  $('.related-products-carousel').owlCarousel({
     items: 6,
     loop:true,
     dots: false,
@@ -81,8 +81,31 @@ $(document).ready(function () {
       }
     }
   });
+  //карусель для хитов продаж
+  $('.related-products-carousel_product').owlCarousel({
+    items: 4,
+    loop:true,
+    dots: false,
+    autoplay:false,
+    autoplayTimeout:5000,
+    autoplayHoverPause:false,
+    nav:true,
+    navText: [
+      "<i class=\"fas fa-chevron-left\"></i>",
+      "<i class=\"fas fa-chevron-right\"></i>"
+    ],
+    responsive:{
+      0:{
+        items:2,
+        nav:false
+      },
+      900:{
+        items:4
+      }
+    }
+  });
   //карусель для лучшие предложения
-  $('#best-offer-carousel').owlCarousel({
+  $('.best-offer-carousel').owlCarousel({
     items: 3,
     loop:true,
     margin:30,
@@ -147,33 +170,26 @@ $(document).ready(function () {
     autoplayHoverPause:false,
     nav:false
   });
-  //выделение сердечки при клике
-  $(".item--like a").on('click', function (){
-    if($(this).hasClass("active")) {
-      $(this).removeClass("active");
-    } else {
-      $(this).addClass("active");
-    }
+  //карусель товара
+  $('.product-carousel').owlCarousel({
+    items: 2,
+    loop:true,
+    margin:0,
+    dots: true,
+    autoplay:false,
+    autoplayTimeout:5000,
+    autoplayHoverPause:false,
+    nav:true,
+    navText: [
+      "<i class=\"fas fa-chevron-left\"></i>",
+      "<i class=\"fas fa-chevron-right\"></i>"
+    ]
   });
-  //слайдер в карточке товара
-  $('.slider-container').find('.slider-for').slick({
-    lazyLoad: 'ondemand',
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    fade: true,
-    asNavFor: '.slider-container .slider-nav'
-  });
-  $('.slider-container').find('.slider-nav').slick({
-    lazyLoad: 'ondemand',
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    asNavFor: '.slider-container .slider-for',
-    dots: false,
-    centerMode: false,
-    arrows: false,
-    focusOnSelect: true
-  });
+  //клик подробнее в стр товара
+  $("#product-card .card-desc--btn").on('click', function () {
+    $("#product-card .card-desc--text").removeClass('hidden');
+    $(this).addClass('d-none');
+  })
 });
 
 

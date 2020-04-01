@@ -68,42 +68,6 @@ section#footer {
     height: 30px;
     vertical-align: middle;
   }
-  .footer--social {
-    .footer--column-item {
-      width: 30px;
-      height: 30px;
-    }
-    .footer--social-item_fb {
-      background: url(../img/footer/facebook.svg);
-      &:hover {
-        background: url(../img/footer/facebook_hover.svg);
-      }
-    }
-    .footer--social-item_vk {
-      background: url(../img/footer/vk.svg);
-      &:hover {
-        background: url(../img/footer/vk_hover.svg);
-      }
-    }
-    .footer--social-item_tw {
-      background: url(../img/footer/twitter.svg);
-      &:hover {
-        background: url(../img/footer/twitter_hover.svg);
-      }
-    }
-    .footer--social-item_youtube {
-      background: url(../img/footer/youtube.svg);
-      &:hover {
-        background: url(../img/footer/youtube_hover.svg);
-      }
-    }
-    .footer--social-item_inst {
-      background: url(../img/footer/instagram.svg);
-      &:hover {
-        background: url(../img/footer/instagram_hover.svg);
-      }
-    }
-  }
   .footer--payment {
     .footer--payment-mastercard {
       width: 43px;

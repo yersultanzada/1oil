@@ -40,26 +40,39 @@ a {
 .g-text-red {
   color: $red !important;
 }
-.g-social {
-  margin-top: 15px;
-  li {
-    text-align: center;
-    a {
-      display: block;
-      background-color: transparent;
-      border: 1px solid $blue;
-      border-radius: 50%;
-      width: 30px;
-      height: 30px;
-      line-height: 33px;
-      color: $blue;
-      i {
-        font-size: 17px;
-      }
-      &:hover {
-        background-color: $blue;
-        color: $white;
-      }
+.footer--social {
+  .footer--column-item {
+    width: 30px;
+    height: 30px;
+  }
+  .footer--social-item_fb {
+    background: url(../img/footer/facebook.svg);
+    &:hover {
+      background: url(../img/footer/facebook_hover.svg);
+    }
+  }
+  .footer--social-item_vk {
+    background: url(../img/footer/vk.svg);
+    &:hover {
+      background: url(../img/footer/vk_hover.svg);
+    }
+  }
+  .footer--social-item_tw {
+    background: url(../img/footer/twitter.svg);
+    &:hover {
+      background: url(../img/footer/twitter_hover.svg);
+    }
+  }
+  .footer--social-item_youtube {
+    background: url(../img/footer/youtube.svg);
+    &:hover {
+      background: url(../img/footer/youtube_hover.svg);
+    }
+  }
+  .footer--social-item_inst {
+    background: url(../img/footer/instagram.svg);
+    &:hover {
+      background: url(../img/footer/instagram_hover.svg);
     }
   }
 }
