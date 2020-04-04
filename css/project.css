@@ -35,7 +35,7 @@ a:hover {
 }
 
 .block-title {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 500;
   text-transform: uppercase;
 }
@@ -416,7 +416,7 @@ section {
   left: -15px;
   z-index: 10;
   width: 1270px;
-  height: 420px;
+  height: 400px;
   padding: 35px 30px;
   background-color: #fff;
   -webkit-box-shadow: 0px 0px 16.32px 7.68px rgba(118, 118, 118, 0.21);
@@ -430,7 +430,7 @@ section {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-top: 25px;
+  margin-top: 15px;
 }
 
 .nav .main-nav--dropdown .main-nav--dropdown-content .main-nav--dropdown-wrap .main-nav--dropdown-items {
@@ -1218,8 +1218,8 @@ section#category .category--filter .filter--item .dropdown-menu {
   font-size: 13px;
   border: none;
   border-radius: 0;
-  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  -webkit-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
   min-width: 17rem;
   padding: 0;
 }
@@ -1249,11 +1249,26 @@ section#category .category--filter .filter--item .dropdown-menu:before {
   margin-left: -20px;
   content: '';
   display: block;
-  width: 19px;
-  height: 16px;
+  width: 0;
+  height: 0;
   position: absolute;
   top: -11px;
   left: 50%;
+}
+
+section#category .category--filter .filter--item .dropdown-menu:after {
+  content: '';
+  z-index: -1;
+  display: block;
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  margin-left: -3px;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 -2px 8px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 -2px 8px 1px rgba(0, 0, 0, 0.25);
 }
 
 section#category .category--filter .filter--item .dropdown-menu--brandSearch {
@@ -2482,6 +2497,243 @@ section#footer .footer--contacts p {
   section#footer a.nav-link {
     padding: .5rem 1rem;
   }
+}
+
+section.profile .profile-menu ul {
+  padding-left: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+section.profile .profile-menu a {
+  display: inline-block;
+  padding: .3rem 1rem .3rem 0;
+  font-weight: 500;
+}
+
+section.profile .profile-menu a:hover, section.profile .profile-menu a.active {
+  color: #3767e1;
+}
+
+section.profile .profile-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+section.profile form .form-control {
+  font-size: 13px;
+  background-color: transparent;
+  height: calc(1.7rem + 2px);
+  border-radius: 0;
+  border-color: #8d8d8d;
+}
+
+section.profile form input[type=email]:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: none;
+}
+
+section.profile form .col-form-label {
+  padding-top: calc(.275rem + 1px);
+  padding-bottom: calc(.275rem + 1px);
+}
+
+section.profile form a.btn {
+  border-color: #8d8d8d !important;
+  color: #8d8d8d !important;
+  font-size: 13px;
+}
+
+section.profile form a.btn:active, section.profile form a.btn:focus, section.profile form a.btn:hover {
+  background-color: transparent !important;
+  border-color: #8d8d8d !important;
+  color: #000 !important;
+}
+
+section.profile form .select-hidden {
+  display: none;
+  visibility: hidden;
+  padding-right: 10px;
+}
+
+section.profile form .select {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  color: #495057;
+  height: 29px;
+  margin-right: 16px;
+}
+
+section.profile form .select:first-child {
+  width: 75px;
+}
+
+section.profile form .select:nth-child(2) {
+  width: 105px;
+}
+
+section.profile form .select:last-child {
+  width: 75px;
+}
+
+section.profile form .select ::-webkit-scrollbar {
+  width: 10px;
+}
+
+section.profile form .select ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+section.profile form .select ::-webkit-scrollbar-thumb {
+  background: #8d8d8d;
+  border-radius: 8px;
+}
+
+section.profile form .select ::-webkit-scrollbar-thumb:hover {
+  background: #767676;
+}
+
+section.profile form .select-styled {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+  border: 1px solid #8d8d8d;
+  padding: 2px 15px;
+}
+
+section.profile form .select-styled:after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+section.profile form .select-styled:active:after, section.profile form .select-styled.active:after {
+  top: 13px;
+  -webkit-transform: rotate(315deg);
+  transform: rotate(315deg);
+}
+
+section.profile form .select-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #fff;
+  max-height: 188px;
+  overflow-y: scroll;
+  -webkit-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+section.profile form .select-options li {
+  position: relative;
+  margin: 0;
+  text-indent: 20px;
+}
+
+section.profile form .select-options li:first-child {
+  border-top: none;
+}
+
+section.profile form .select-options li:hover {
+  background: #E9F4FF;
+}
+
+section.profile form .select-options li[rel="hide"] {
+  display: none;
+}
+
+section.profile form .select-options li.current:before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  margin-top: -6px;
+  background: url(../img/controls_icon.png) -5px -7px no-repeat;
+}
+
+section.profile form .form-check-inline {
+  position: relative;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  padding-bottom: 15px;
+  margin-right: 0;
+}
+
+section.profile form .form-check-inline:first-child label {
+  border-top-left-radius: .25rem;
+  border-bottom-left-radius: .25rem;
+}
+
+section.profile form .form-check-inline:last-child {
+  margin-left: -4px;
+}
+
+section.profile form .form-check-inline:last-child label {
+  border-top-right-radius: .25rem;
+  border-bottom-right-radius: .25rem;
+}
+
+section.profile form .form-check-inline .form-check-input {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-right: 0;
+  z-index: -1;
+  opacity: 0;
+}
+
+section.profile form .form-check-inline .form-check-label {
+  padding: 2px 15px;
+  border: 1px solid #8d8d8d;
+  cursor: pointer;
+}
+
+section.profile form .form-check-inline .form-check-input:checked ~ .form-check-label {
+  background-color: #000;
+  color: #fff;
+}
+
+section.profile form button {
+  background-color: #3767e1;
+  color: #fff;
+  font-size: 13px;
+  padding: .375rem 1.75rem;
+}
+
+section.profile form button:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+section.profile form button:hover {
+  background-color: #1e4ec7;
+}
+
+section.profile form button.disabled {
+  background-color: #8d8d8d;
+  cursor: default;
 }
 
 #sidebar {

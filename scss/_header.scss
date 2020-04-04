@@ -164,14 +164,14 @@
         left: -15px;
         z-index: 10;
         width: 1270px;
-        height: 420px;
+        height: 400px;
         padding: 35px 30px;
         background-color: $white;
         box-shadow: 0px 0px 16.32px 7.68px rgba(118, 118, 118, 0.21);
         .main-nav--dropdown-wrap {
           display: flex;
           justify-content: space-between;
-          margin-top: 25px;
+          margin-top: 15px;
           .main-nav--dropdown-items {
             align-self: center;
             .main-nav--dropdown-link {
