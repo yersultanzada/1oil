@@ -58,8 +58,8 @@
     }
   }
   .actual-title {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 22px;
+    font-family: 'CoFo Sans Lamoda Bold',sans-serif;
   }
   a:hover {
     .small-img-block:after, .big-img-block:after {
@@ -122,8 +122,13 @@
       font-weight: 500;
       line-height: 1.2;
       .content-block--title {
-        font-size: 20px;
+        font-size: 24px;
+        font-family: 'CoFo Sans Lamoda Bold',sans-serif;
         margin-bottom: 10px;
+      }
+      .content-block--desc {
+        font-size: 15px;
+        color: $gray;
       }
     }
   }
@@ -136,8 +141,8 @@ section.seo-text {
     margin-bottom: 20px;
   }
   .seo-text--itemTitle {
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 14px;
+    font-family: 'CoFo Sans Lamoda Bold',sans-serif;
     margin-bottom: 5px;
   }
 }

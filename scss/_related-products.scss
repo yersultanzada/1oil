@@ -83,11 +83,11 @@ section.related-products {
         display: inline-block;
         color: #f93c00;
         font-size: 12px;
-        font-weight: 600;
+        font-family: 'CoFo Sans Lamoda Bold',sans-serif;
       }
       .price {
         font-size: 12px;
-        font-weight: 600;
+        font-family: 'CoFo Sans Lamoda Bold',sans-serif;
         color: $black;
       }
       .product-title {
@@ -148,8 +148,8 @@ section.actual-products {
     }
   }
   .actual-products--text {
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 24px;
+    font-family: 'CoFo Sans Lamoda Bold',sans-serif;
     text-align: center;
     margin-top: 20px;
   }
@@ -183,8 +183,8 @@ section.know-more {
     }
   }
   .know-more--text {
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 24px;
+    font-family: 'CoFo Sans Lamoda Bold',sans-serif;
     margin-top: 20px;
   }
   .know-more--subtext {

@@ -4,13 +4,29 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
  */
 
+@font-face {
+  font-family: "CoFo Sans Lamoda";
+  src: url("../fonts/CoFoSansLamoda-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CoFo Sans Lamoda Bold";
+  src: url("../fonts/CoFoSansLamoda-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
 body {
   overflow-x: hidden;
   color: #000;
   background-color: #fff;
   font-size: 13px;
   line-height: 1.8;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'CoFo Sans Lamoda',sans-serif;
 }
 
 body.js-no-scroll {
@@ -35,9 +51,10 @@ a:hover {
 }
 
 .block-title {
-  font-size: 22px;
-  font-weight: 500;
+  font-size: 24px;
+  font-family: 'CoFo Sans Lamoda Bold',sans-serif;
   text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 .g-text-gray {
@@ -97,18 +114,155 @@ a:hover {
   background: url(../img/footer/instagram_hover.svg);
 }
 
-.item--like a {
+.modal .modal-content {
+  border-radius: 0;
+  -webkit-box-shadow: 0 1px 16px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 16px rgba(0, 0, 0, 0.25);
+}
+
+.modal .modal-content .modal-header {
+  position: relative;
+  padding: 30px 30px 10px;
+}
+
+.modal .modal-content .modal-header .modal-title {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-family: 'CoFo Sans Lamoda Bold',sans-serif;
+}
+
+.modal .modal-content .modal-header button.close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.modal .modal-content .modal-header button.close:focus, .modal .modal-content .modal-header button.close:hover, .modal .modal-content .modal-header button.close:active {
+  outline: none;
+}
+
+.modal .modal-content .modal-body {
+  padding: 20px 30px 30px 30px;
+}
+
+.modal .modal-content .modal-body button {
+  color: #3767e1;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  background-color: transparent;
+  font-family: 'CoFo Sans Lamoda Bold',sans-serif;
+}
+
+.modal .modal-content .modal-body button:hover {
+  color: #1e4ec7;
+}
+
+.modal .modal-content .modal-body .help-text {
+  line-height: normal;
+  margin-bottom: 15px;
+}
+
+.modal .modal-content .modal-body--desc span {
+  font-family: 'CoFo Sans Lamoda Bold',sans-serif;
+}
+
+.modal .modal-content .modal-body--desc button {
+  float: right;
+}
+
+.modal .modal-content .modal-body .auth-social--list {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.modal .modal-content .modal-body .auth-social--list .auth-social--item {
+  display: inline-block;
+  width: 172px;
+  height: 40px;
+  line-height: 42px;
+  position: relative;
+  margin: 4px;
+  padding: 0;
+  border-radius: 3px;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-position: 4px 4px;
+  text-align: left;
+  text-indent: 38px;
+  margin-bottom: 8px !important;
+  overflow: hidden;
+  font-family: 'CoFo Sans Lamoda Bold',sans-serif;
   cursor: pointer;
 }
 
-.item--like a i {
-  font-size: 18px;
-  color: #8d8d8d;
+.modal .modal-content .modal-body .auth-social--list .auth-social--item:hover {
+  opacity: .9;
 }
 
-.item--like a.active i.far {
-  font-weight: 700;
-  color: #3767e1;
+.modal .modal-content .modal-body .auth-social--list .auth-social--item.social-item--vk {
+  background-color: #4d75a3;
+  background-image: url(../img/popup/login-logo-vk.svg);
+}
+
+.modal .modal-content .modal-body .auth-social--list .auth-social--item.social-item--fb {
+  background-color: #3b5998;
+  background-image: url(../img/popup/login-logo-fb.svg);
+}
+
+.modal .modal-content .modal-body .auth-social--list .auth-social--item.social-item--g {
+  background-color: #fff;
+  color: #2796FF;
+  -webkit-box-shadow: inset 0 0 0 1px #2796FF;
+  box-shadow: inset 0 0 0 1px #2796FF;
+  background-image: url(../img/popup/login-logo-gp.svg);
+}
+
+.modal .modal-content .modal-body .auth-social--list .auth-social--item.social-item--mail {
+  background-color: #005ff9;
+  background-image: url(../img/popup/login-logo-mail.svg);
+  background-position: 3px;
+}
+
+.modal .modal-content .modal-body form {
+  margin-top: 15px;
+}
+
+.modal .modal-content .modal-body form .form-group label {
+  font-family: 'CoFo Sans Lamoda Bold',sans-serif;
+  margin-bottom: 5px;
+}
+
+.modal .modal-content .modal-body form .form-group .form-control {
+  font-size: 13px;
+  background-color: transparent;
+  height: calc(1.7rem + 2px);
+  border-radius: 0;
+  border-color: #8d8d8d;
+}
+
+.modal .modal-content .modal-body form .form-group .form-control:focus {
+  -webkit-box-shadow: 0 0 4px 0 #2796FF;
+  box-shadow: 0 0 4px 0 #2796FF;
+  border: 1px solid #2796FF;
+}
+
+.modal .modal-content .modal-body form button._enter {
+  background-color: #3767e1;
+  color: #fff;
+  height: 33px;
+  padding: 0 37px;
+  border-radius: 3px;
+  margin-right: 15px;
+}
+
+.modal .modal-content .modal-body form button._enter:hover {
+  background-color: #1e4ec7;
+}
+
+.modal#regModal form {
+  margin-top: 0;
 }
 
 h1,
@@ -188,6 +342,12 @@ section {
   }
 }
 
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 425px;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
   .container {
     max-width: 740px;
@@ -256,7 +416,6 @@ section {
   outline: none;
   height: 37px;
   font-weight: 500;
-  font-size: 12px;
   padding: .3rem 1rem;
   color: #fff;
   cursor: pointer;
@@ -299,7 +458,7 @@ section {
   padding: 15px;
   margin-top: 0;
   width: 300px;
-  font-size: 12px;
+  line-height: 1.3;
   color: #000;
   -webkit-box-shadow: 0px 0px 7.68px 0.32px rgba(92, 92, 92, 0.59);
   box-shadow: 0px 0px 7.68px 0.32px rgba(92, 92, 92, 0.59);
@@ -344,7 +503,7 @@ section {
 .nav .upper-nav a {
   color: #000;
   padding-bottom: .5rem;
-  font-weight: 500;
+  font-size: 16px;
 }
 
 .nav .upper-nav a:hover {
@@ -353,6 +512,19 @@ section {
 
 .nav .upper-nav .text-right a:hover {
   border-bottom: none;
+  color: #3767e1;
+}
+
+.nav .upper-nav button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.nav .upper-nav button:hover {
   color: #3767e1;
 }
 
@@ -382,6 +554,7 @@ section {
 .nav .main-nav a._sale {
   color: #e02222;
   margin-right: 0;
+  font-size: 16px;
 }
 
 .nav .main-nav a._sale:hover {
@@ -400,7 +573,8 @@ section {
 .nav .main-nav--dropdown > a {
   display: inline-block;
   max-width: 136px;
-  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.1;
   vertical-align: text-top;
   margin-right: 1.2rem;
 }
@@ -666,8 +840,8 @@ section {
 }
 
 #content .actual-title {
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 22px;
+  font-family: 'CoFo Sans Lamoda Bold',sans-serif;
 }
 
 #content a:hover .small-img-block:after, #content a:hover .big-img-block:after {
@@ -740,8 +914,14 @@ section {
 }
 
 #content .content-block--text .content-block--title {
-  font-size: 20px;
+  font-size: 24px;
+  font-family: 'CoFo Sans Lamoda Bold',sans-serif;
   margin-bottom: 10px;
+}
+
+#content .content-block--text .content-block--desc {
+  font-size: 15px;
+  color: #8d8d8d;
 }
 
 section.seo-text .seo-text--title {
@@ -751,8 +931,8 @@ section.seo-text .seo-text--title {
 }
 
 section.seo-text .seo-text--itemTitle {
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 14px;
+  font-family: 'CoFo Sans Lamoda Bold',sans-serif;
   margin-bottom: 5px;
 }
 
@@ -963,12 +1143,12 @@ section.related-products .block-card .card--text .new-price {
   display: inline-block;
   color: #f93c00;
   font-size: 12px;
-  font-weight: 600;
+  font-family: 'CoFo Sans Lamoda Bold',sans-serif;
 }
 
 section.related-products .block-card .card--text .price {
   font-size: 12px;
-  font-weight: 600;
+  font-family: 'CoFo Sans Lamoda Bold',sans-serif;
   color: #000;
 }
 
@@ -1032,8 +1212,8 @@ section.actual-products .actual-products--img:hover .actual-products--btn {
 }
 
 section.actual-products .actual-products--text {
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 24px;
+  font-family: 'CoFo Sans Lamoda Bold',sans-serif;
   text-align: center;
   margin-top: 20px;
 }
@@ -1067,8 +1247,8 @@ section.know-more .know-more--img:hover .know-more--imgEffect:after {
 }
 
 section.know-more .know-more--text {
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 24px;
+  font-family: 'CoFo Sans Lamoda Bold',sans-serif;
   margin-top: 20px;
 }
 
@@ -2339,7 +2519,7 @@ section#product-card .card-details .table tr:last-child th, section#product-card
 .email-subscription .email-subscription--title {
   font-size: 18px;
   color: #000;
-  font-weight: 500;
+  font-family: 'CoFo Sans Lamoda Bold',sans-serif;
 }
 
 .email-subscription a {
@@ -2375,7 +2555,7 @@ section#footer {
 }
 
 section#footer .footer--block-title {
-  font-weight: 500;
+  font-family: 'CoFo Sans Lamoda Bold',sans-serif;
   margin-bottom: 15px;
 }
 

@@ -86,7 +86,9 @@
           </div>
           <div class="col-lg-4 align-self-center text-right">
             <ul class="d-inline-block list-inline mb-0">
-              <li class="list-inline-item"><a href="#" class="mr-4">Войти</a></li>
+              <li class="list-inline-item">
+                <button type="button" data-toggle="modal" data-target="#authModal" class="mr-4">Войти</button>
+              </li>
               <li class="list-inline-item nav-cart">
                 <a href="cart.html"><img src="img/header/cart.png" alt="">Корзина</a>
                 <span class="badge">4</span>
@@ -1217,6 +1219,128 @@
 
     <div class="overlay"></div>
     <div class="overlay-for-search"></div>
+
+    <!-- Модалка для входа -->
+    <div class="modal fade" id="authModal" tabindex="-1" role="dialog" aria-labelledby="authModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="authModalTitle">ВХОД</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <img src="img/popup/big-close-cross.svg" alt="">
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-body--desc">
+              <span>Через соцсети</span> (рекомендуем для новых покупателей)
+            </div>
+            <div class="auth-social--list">
+              <span class="auth-social--item social-item--vk">ВКонтакте</span>
+              <span class="auth-social--item social-item--fb">Facebook</span>
+              <span class="auth-social--item social-item--g">Google</span>
+              <span class="auth-social--item social-item--mail">Mail.ru</span>
+            </div>
+            <div class="modal-body--desc mt-3">
+              <span>С помощью аккаунта Lamoda</span>
+              <button type="button" data-toggle="modal" data-target="#regModal" data-dismiss="modal">Создать аккаунт</button>
+            </div>
+            <form action="">
+              <div class="form-group">
+                <input type="email" name="auth_email" class="form-control" placeholder="E-mail">
+              </div>
+              <div class="form-group">
+                <input type="text" name="auth_pass" class="form-control" placeholder="Пароль">
+              </div>
+              <button type="submit" class="_enter">Войти</button>
+              <button type="button" data-toggle="modal" data-target="#lostModal" data-dismiss="modal">Забыли пароль?</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Модалка для регистрации -->
+    <div class="modal fade" id="regModal" tabindex="-1" role="dialog" aria-labelledby="regModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="regModalTitle">Регистрация</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <img src="img/popup/big-close-cross.svg" alt="">
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <div class="form-group">
+                <label>Введите ваш e-mail</label>
+                <input type="email" name="reg_email" class="form-control">
+              </div>
+              <div class="form-group">
+                <label>Придумайте пароль</label><span> (не короче шести символов)</span>
+                <input type="text" name="reg_pass" class="form-control">
+              </div>
+              <div class="form-group">
+                <label>Повторите пароль</label>
+                <input type="text" name="reg_pass_repeat" class="form-control">
+              </div>
+              <div class="form-group">
+                <label>Ваше имя</label>
+                <input type="text" name="reg_name" class="form-control">
+              </div>
+              <button type="submit" class="_enter">Зарегистрироваться</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Модалка для восстановления пароля -->
+    <div class="modal fade" id="lostModal" tabindex="-1" role="dialog" aria-labelledby="lostModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="lostModalTitle">Восстановление пароля</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <img src="img/popup/big-close-cross.svg" alt="">
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <div class="form-group">
+                <label>Введите ваш e-mail</label>
+                <input type="email" name="lost_email" class="form-control">
+              </div>
+              <div class="help-text">
+                Укажите адрес эл. почты, который вы использовали при оформлении заказов в Lamoda. Мы вышлем вам инструкцию по восстановлению пароля.
+              </div>
+              <button type="submit" class="_enter" data-toggle="modal" data-target="#lostModalSuccess" data-dismiss="modal">Восстановить пароль</button>
+              <button type="button" data-toggle="modal" data-target="#authModal" data-dismiss="modal">Вспомнили пароль?</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Модалка для восстановления пароля успех -->
+    <div class="modal fade" id="lostModalSuccess" tabindex="-1" role="dialog" aria-labelledby="lostModalSuccessTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="lostModalSuccessTitle">Восстановление пароля</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <img src="img/popup/big-close-cross.svg" alt="">
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex">
+              <div>
+                <img src="img/popup/reset-success.svg" alt="">
+              </div>
+              <div class="help-text align-self-center mb-0">
+                Ссылка для восстановления пароля отправлена на ваш e-mail. Пожалуйста, проверьте почту.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>

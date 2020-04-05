@@ -1,11 +1,25 @@
 // Global styling for this template
+@font-face {
+  font-family: "CoFo Sans Lamoda";
+  src: url("../fonts/CoFoSansLamoda-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CoFo Sans Lamoda Bold";
+  src: url("../fonts/CoFoSansLamoda-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
 body {
   overflow-x: hidden;
   color: $black;
   background-color: $white;
   font-size: 13px;
   line-height: 1.8;
-  @include montserrat-font;
+  font-family: 'CoFo Sans Lamoda',sans-serif;
 }
 body.js-no-scroll {
   height: 100%;
@@ -27,9 +41,10 @@ a {
   }
 }
 .block-title {
-  font-size: 22px;
-  font-weight: 500;
+  font-size: 24px;
+  font-family: 'CoFo Sans Lamoda Bold',sans-serif;
   text-transform: uppercase;
+  letter-spacing: 3px;
 }
 .g-text-gray {
   color: $gray !important;
@@ -76,18 +91,136 @@ a {
     }
   }
 }
-.item--like {
-  a {
-    cursor: pointer;
-    i {
-      font-size: 18px;
-      color: $gray;
-    }
-    &.active {
-      i.far {
-        font-weight: 700;
-        color: $blue;
+.modal {
+  .modal-content {
+    border-radius: 0;
+    box-shadow: 0 1px 16px rgba(0,0,0,.25);
+    .modal-header {
+      position: relative;
+      padding: 30px 30px 10px;
+      .modal-title {
+        text-transform: uppercase;
+        font-size: 24px;
+        font-family: 'CoFo Sans Lamoda Bold',sans-serif;
       }
+      button.close {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        &:focus,
+        &:hover,
+        &:active {
+          outline: none;
+        }
+      }
+    }
+    .modal-body {
+      padding: 20px 30px 30px 30px;
+      button {
+        color: $blue;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 0;
+        background-color: transparent;
+        font-family: 'CoFo Sans Lamoda Bold',sans-serif;
+        &:hover {
+          color: darken($blue, 10%);
+        }
+      }
+      .help-text {
+        line-height: normal;
+        margin-bottom: 15px;
+      }
+      &--desc {
+        span {
+          font-family: 'CoFo Sans Lamoda Bold',sans-serif;
+        }
+        button {
+          float: right;
+        }
+      }
+      .auth-social--list {
+        padding-bottom: 15px;
+        border-bottom: 1px solid #e9ecef;
+        .auth-social--item {
+          display: inline-block;
+          width: 172px;
+          height: 40px;
+          line-height: 42px;
+          position: relative;
+          margin: 4px;
+          padding: 0;
+          border-radius: 3px;
+          color: #fff;
+          background-repeat: no-repeat;
+          background-position: 4px 4px;
+          text-align: left;
+          text-indent: 38px;
+          margin-bottom: 8px!important;
+          overflow: hidden;
+          font-family: 'CoFo Sans Lamoda Bold',sans-serif;
+          cursor: pointer;
+          &:hover {
+            opacity: .9;
+          }
+          &.social-item--vk {
+            background-color: #4d75a3;
+            background-image: url(../img/popup/login-logo-vk.svg);
+          }
+          &.social-item--fb {
+            background-color: #3b5998;
+            background-image: url(../img/popup/login-logo-fb.svg);
+          }
+          &.social-item--g {
+            background-color: #fff;
+            color: #2796FF;
+            box-shadow: inset 0 0 0 1px #2796FF;
+            background-image: url(../img/popup/login-logo-gp.svg);
+          }
+          &.social-item--mail {
+            background-color: #005ff9;
+            background-image: url(../img/popup/login-logo-mail.svg);
+            background-position: 3px;
+          }
+        }
+      }
+      form {
+        margin-top: 15px;
+        .form-group {
+          label {
+            font-family: 'CoFo Sans Lamoda Bold',sans-serif;
+            margin-bottom: 5px;
+          }
+          .form-control {
+            font-size: 13px;
+            background-color: transparent;
+            height: calc(1.7rem + 2px);
+            border-radius: 0;
+            border-color: $gray;
+            &:focus {
+              box-shadow: 0 0 4px 0 #2796FF;
+              border: 1px solid #2796FF;
+            }
+          }
+        }
+        button._enter {
+          background-color: $blue;
+          color: $white;
+          height: 33px;
+          padding: 0 37px;
+          border-radius: 3px;
+          margin-right: 15px;
+          &:hover {
+            background-color: darken($blue, 10%);
+          }
+        }
+      }
+    }
+  }
+  &#regModal {
+    form {
+      margin-top: 0;
     }
   }
 }
@@ -162,6 +295,11 @@ section {
 @media (max-width: 991px) {
   section {
     padding: 25px 0;
+  }
+}
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 425px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
