@@ -1,0 +1,130 @@
+.order-all {
+  .nav-tabs {
+    border-bottom: none;
+    .nav-item {
+      .nav-link {
+        font-size: 24px;
+        padding: .3rem 0;
+        border: none;
+        color: $gray;
+        &.active, &:hover {
+          border-bottom: 2px solid $black;
+          color: $black;
+        }
+      }
+      &:first-child {
+        margin-right: 20px;
+      }
+    }
+  }
+  .tab-content {
+    margin-top: 15px;
+  }
+  &--card {
+    background-color: $white;
+    border: 1px solid #dedede;
+    padding: 15px;
+    margin-bottom: 20px;
+    .card--title {
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .card--seller {
+      font-size: 15px;
+    }
+    .card--img {
+      margin-top: 10px;
+      img {
+        width: 60px;
+        height: 80px;
+        object-fit: cover;
+        &:not(:last-child) {
+          margin-right: 5px;
+        }
+      }
+    }
+    .card--price, .card--date {
+      color: $gray;
+      text-align: right;
+      font-family: 'CoFo Sans Lamoda Bold',sans-serif;
+    }
+    .card--state {
+      text-align: right;
+      .card--status {
+        font-family: 'CoFo Sans Lamoda Bold',sans-serif;
+        &.status-delivered {
+          color: $blue;
+        }
+        &.status-processing {
+          color: green;
+        }
+        &.status-return {
+          color: red;
+        }
+      }
+      .card--btn {
+        position: absolute;
+        bottom: 0;
+        right: 15px;
+      }
+    }
+  }
+}
+.order-solo {
+  font-size: 15px;
+  .return-to-all {
+    a {
+      font-size: 20px;
+      text-transform: uppercase;
+      font-family: 'CoFo Sans Lamoda Bold',sans-serif;
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
+  &--title {
+    font-size: 22px;
+    font-family: 'CoFo Sans Lamoda Bold',sans-serif;
+    margin-top: 25px;
+  }
+  &--date {
+    color: $blue;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $black;
+  }
+  &--table {
+    padding: 15px 0 25px 0;
+    border-bottom: 2px solid $black;
+    .order-solo--tableL {
+      font-family: 'CoFo Sans Lamoda Bold',sans-serif;
+    }
+    .row {
+      margin-bottom: 5px;
+      &:last-child {
+        margin-top: 20px;
+      }
+      &:first-child .order-solo--tableR {
+        color: $blue;
+      }
+    }
+    .order-solo--tableR a {
+      color: $blue;
+    }
+  }
+  &--product {
+    .product-border {
+      border-bottom: 1px solid #dedede;
+      padding: 15px 0;
+      .product-counter {
+        font-family: 'CoFo Sans Lamoda Bold',sans-serif;
+      }
+    }
+    .product-img {
+      img {
+        width: 120px;
+        height: 150px;
+        object-fit: cover;
+      }
+    }
+  }
+}

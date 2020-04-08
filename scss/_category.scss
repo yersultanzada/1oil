@@ -26,12 +26,12 @@ section#category {
   }
   .category--title {
     font-size: 20px;
-    font-weight: 500;
+    font-family: 'CoFo Sans Lamoda Bold',sans-serif;
   }
   .navigation--up {
     .navigation--title {
       text-transform: uppercase;
-      font-weight: 500;
+      font-family: 'CoFo Sans Lamoda Bold',sans-serif;
       padding-top: 3px;
     }
   }
@@ -239,7 +239,6 @@ section#category {
     }
     .filter--clear {
       a {
-        font-size: 12px;
         color: $blue;
         font-weight: 500;
       }
@@ -262,7 +261,6 @@ section#category {
         color: $black;
         font-weight: 500;
         line-height: 1.2;
-        font-size: 12px;
         .link--text {
           max-width: 170px;
           margin-right: 3px;
@@ -296,7 +294,6 @@ section#category {
             position: relative;
             display: block;
             padding: 8px 5px;
-            font-size: 12px;
             line-height: 1.2;
             .link--text {
               max-width: 170px;
@@ -353,7 +350,7 @@ section#category {
       }
       .item--price {
         font-size: 18px;
-        font-weight: 500;
+        font-family: 'CoFo Sans Lamoda Bold',sans-serif;
         margin-top: 8px;
         margin-bottom: 10px;
       }
@@ -361,8 +358,12 @@ section#category {
         visibility: hidden;
         text-align: center;
         margin-top: 10px;
-        a {
+        a,button {
           color: $gray;
+          background-color: transparent;
+          border: none;
+          outline: none;
+          cursor: pointer;
           &:before {
             content: "";
             display: inline-block;
@@ -464,8 +465,138 @@ section#category {
   }
 }
 
+#categoryModal {
+  .modal-content {
+    position: relative;
+    .category-modal--img {
+      background-color: #f7f7f7;
+      padding: 80px 50px;
+      img {
+        width: 200px;
+        height: 300px;
+        object-fit: cover;
+      }
+    }
+    .category-modal--text {
+      padding: 20px;
+      .modal-text--title {
+        font-size: 17px;
+        font-family: 'CoFo Sans Lamoda Bold',sans-serif;
+      }
+      .modal-text--type {
+        color: $gray;
+        font-size: 15px;
+      }
+      .modal-text--price {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin: 10px 0;
+        border-top: 1px solid #dedede;
+        border-bottom: 1px solid #dedede;
+        .price--old {
+          text-decoration: line-through;
+        }
+        .price--new {
+          position: relative;
+          font-size: 18px;
+          font-family: 'CoFo Sans Lamoda Bold',sans-serif;
+        }
+        .price--per {
+          position: absolute;
+          top: -3px;
+          right: -37px;
+          background-color: $blue;
+          color: $white;
+          border-radius: 3px;
+          font-size: 10px;
+          padding: 1px 5px;
+          font-weight: 500;
+        }
+      }
+      .extra--item {
+        margin-bottom: 8px;
+      }
+      .modal-text--btn {
+        margin: 15px 0;
+        .btn {
+          padding: .5rem 1.75rem;
+        }
+      }
+      .modal-text--brandLink {
+        position: relative;
+        padding: 10px 0;
+        a {
+          display: block;
+          color: $blue;
+          &:hover {
+            color: darken($blue, 10%);
+          }
+          &:first-child {
+            margin-bottom: 5px;
+          }
+        }
+        a.brandLink--img {
+          position: absolute;
+          top: -5px;
+          right: 10px;
+          padding: 5px;
+          border: 1px solid #c5c5c5;
+          background-color: $white;
+          img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+          }
+        }
+      }
+      .modal-text--social {
+        margin-top: 10px;
+        .social--title {
+          font-size: 14px;
+          font-family: 'CoFo Sans Lamoda Bold',sans-serif;
+          text-transform: uppercase;
+          margin-bottom: 5px;
+        }
+        .footer--column-item {
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          vertical-align: middle;
+        }
+      }
+    }
+    .modal-text--more {
+      background-color: #ededed;
+      text-align: center;
+      padding: 15px;
+      a {
+        color: $blue;
+        font-family: 'CoFo Sans Lamoda Bold',sans-serif;
+      }
+      img {
+        width: 18px;
+        margin-left: 3px;
+      }
+    }
+    button.close {
+      position: absolute;
+      top: -6px;
+      right: -33px;
+    }
+  }
+}
+
 @media (max-width: 767px) {
   .category--items>.row>div {
     padding-right: 15px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  #categoryModal .modal-dialog {
+    max-width: 625px;
   }
 }
