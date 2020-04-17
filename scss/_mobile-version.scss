@@ -13,6 +13,8 @@
     left: 0;
   }
   ul.components {
+    position: relative;
+    height: 100%;
     padding: 20px 0;
     list-style: none;
     li {
@@ -32,12 +34,41 @@
       a[data-toggle="collapse"] {
         position: relative;
       }
+      &._auth {
+        margin-top: 100px;
+        ._border {
+          border-top: 1px solid #dedede;
+          border-bottom: 1px solid #dedede;
+          width: 100%;
+          padding: 0;
+        }
+        >a {
+          color: $blue;
+        }
+        a.logged-in {
+          display: inline-block;
+          color: $black;
+          float: right;
+          margin-top: 3px;
+        }
+        div {
+          display: inline-block;
+          padding: 10px;
+        }
+        ul {
+          padding-bottom: 75px;
+          a {
+            color: $black;
+            padding-left: 10px !important;
+          }
+        }
+      }
     }
     ul {
       list-style: none;
       padding-left: 0;
       a {
-        font-size: 12px !important;
+        font-size: 13px !important;
         padding-left: 30px !important;
         color: $gray;
       }
@@ -211,7 +242,7 @@
         list-style: none;
         padding-left: 0;
         a {
-          font-size: 12px !important;
+          font-size: 13px !important;
           padding-left: 30px !important;
           color: $gray;
         }
@@ -237,7 +268,7 @@
       margin-left: auto;
       span {
         color: $gray;
-        font-size: 12px;
+        font-size: 13px;
       }
     }
   }
@@ -276,7 +307,7 @@
         border-bottom: 1px solid #dadada;
         a {
           display: block;
-          padding: 8px 0;
+          padding: 10px 0;
         }
       }
     }
@@ -423,19 +454,25 @@
   }
 }
 @media (max-width: 575px) {
-  .mobile-version--nav .list-inline-item a {
-    font-size: 12px;
+  .mobile-version--nav .list-inline-item {
+    margin-right: 0;
   }
   .mobile-version {
     &--header {
       .list-inline-item {
         &:not(:last-child) {
-          margin-right: 1rem;
+          margin-right: 1.5rem;
         }
-        a, button {
+        a {
           padding: 0;
           i {
             font-size: 16px;
+          }
+        }
+        button {
+          padding: 0;
+          i {
+            font-size: 18px;
           }
         }
       }

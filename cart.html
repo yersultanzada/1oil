@@ -30,27 +30,39 @@
     <div class="container">
         <div class="row">
             <div class="col d-flex">
-                <div class="block-left">
-                    <div class="g-social">
-                        <ul class="d-inline-block list-inline mb-0">
-                            <li class="list-inline-item"><a href="#"><i class="fab fa-vk"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="ml-auto d-flex block-right">
-                    <div class="block-right--item mr-4 py-2 px-3">
-                        <img src="img/header/h_icon-1.png" alt="">
-                        <p>Бесплатная доставка!</p>
-                    </div>
-                    <div class="block-right--item mr-4">
-                        <img src="img/header/h_icon-2.png" alt="">
-                        <p>Замена масла на месте</p>
+                <div class="block-right">
+                    <div class="block-right--item">
+                        <button class="btn-1">
+                            Замена масла на месте
+                        </button>
+                        <div class="btn-content">
+                            <div class="item--text">
+                                Таким образом рамки и место обучения кадров требуют от нас анализа дальнейших направлений развития.
+                            </div>
+                            <a href="#" class="item--action">Подробнее</a>
+                        </div>
                     </div>
                     <div class="block-right--item">
-                        <img src="img/header/h_icon-3.png" alt="">
-                        <p>Подлинные товары</p>
+                        <button class="btn-2">
+                            Бесплатная доставка!
+                        </button>
+                        <div class="btn-content">
+                            <div class="item--text">
+                                Таким образом рамки и место обучения кадров требуют от нас анализа дальнейших направлений развития.
+                            </div>
+                            <a href="#" class="item--action">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="block-right--item">
+                        <button class="btn-3">
+                            Подлинные товары
+                        </button>
+                        <div class="btn-content">
+                            <div class="item--text">
+                                Таким образом рамки и место обучения кадров требуют от нас анализа дальнейших направлений развития.
+                            </div>
+                            <a href="#" class="item--action">Подробнее</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -62,8 +74,8 @@
         <div class="row upper-nav">
             <div class="col-lg-4 align-self-center">
                 <ul class="d-inline-block list-inline mb-0">
-                    <li class="list-inline-item"><a href="#" class="mr-4">Статьи</a></li>
-                    <li class="list-inline-item"><a href="#" class="mr-4">О компании</a></li>
+                    <li class="list-inline-item"><a href="#">Почитать</a></li>
+                    <li class="list-inline-item"><a href="#">О компании</a></li>
                     <li class="list-inline-item"><a href="#">Как заказать</a></li>
                 </ul>
             </div>
@@ -74,7 +86,9 @@
             </div>
             <div class="col-lg-4 align-self-center text-right">
                 <ul class="d-inline-block list-inline mb-0">
-                    <li class="list-inline-item"><a href="#" class="mr-4">Войти</a></li>
+                    <li class="list-inline-item">
+                        <button type="button" data-toggle="modal" data-target="#authModal" class="mr-4">Войти</button>
+                    </li>
                     <li class="list-inline-item nav-cart">
                         <a href="cart.html"><img src="img/header/cart.png" alt="">Корзина</a>
                         <span class="badge">4</span>
@@ -82,16 +96,239 @@
                 </ul>
             </div>
         </div>
-        <div class="row main-nav mt-5 py-3">
-            <div class="col-xl-9">
-                <div class="d-flex justify-content-around align-items-start">
-                    <a href="" class="mr-3">Моторное масло</a>
-                    <a href="" class="mr-3">Трансмиссионное масло</a>
-                    <a href="" class="mr-3">Гидравлическое масло</a>
-                    <a href="" class="mr-3">Охлаждающая жидкость</a>
-                    <a href="" class="mr-3">Автохимия</a>
-                    <a href="" class="mr-3">Автомобильные фильтры</a>
-                    <a href="" class="mr-3">Бренды</a>
+        <div class="row main-nav">
+            <div class="col-xl-9 text-center text-xl-left">
+                <div class="d-inline-block">
+                    <div class="main-nav--dropdown">
+                        <a href="">Моторные масла</a>
+                        <div class="main-nav--dropdown-content">
+                            <div class="main-nav--dropdown-wrap">
+                                <div class="main-nav--dropdown-items">
+                                    <div class="main-nav--dropdown-link">
+                                        <a href="#">
+                                            <img src="img/best-offer-img.jpg" alt="">
+                                            <div class="main-nav--dropdown-title">Минеральное</div>
+                                        </a>
+                                    </div>
+                                    <div class="main-nav--dropdown-link">
+                                        <a href="#">
+                                            <img src="img/best-offer-img.jpg" alt="">
+                                            <div class="main-nav--dropdown-title">Полусинтетическое</div>
+                                        </a>
+                                    </div>
+                                    <div class="main-nav--dropdown-link">
+                                        <a href="#">
+                                            <img src="img/best-offer-img.jpg" alt="">
+                                            <div class="main-nav--dropdown-title">Синтетическое</div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="main-nav--dropdown-img">
+                                    <img src="img/best-offer-img.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-nav--dropdown">
+                        <a href="">Трансмиссионное<br> масло</a>
+                        <div class="main-nav--dropdown-content">
+                            <div class="main-nav--dropdown-wrap">
+                                <div class="main-nav--dropdown-items">
+                                    <div class="main-nav--dropdown-link">
+                                        <a href="#">
+                                            <img src="img/best-offer-img.jpg" alt="">
+                                            <div class="main-nav--dropdown-title">Автоматическая коробка</div>
+                                        </a>
+                                    </div>
+                                    <div class="main-nav--dropdown-link">
+                                        <a href="#">
+                                            <img src="img/best-offer-img.jpg" alt="">
+                                            <div class="main-nav--dropdown-title">Механическая коробка</div>
+                                        </a>
+                                    </div>
+                                    <div class="main-nav--dropdown-link">
+                                        <a href="#">
+                                            <img src="img/best-offer-img.jpg" alt="">
+                                            <div class="main-nav--dropdown-title">Вариатор</div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="main-nav--dropdown-img">
+                                    <img src="img/best-offer-img.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-nav--dropdown">
+                        <a href="">Гидравлическое<br> масло</a>
+                        <div class="main-nav--dropdown-content">
+                            <div class="main-nav--dropdown-wrap">
+                                <div class="main-nav--dropdown-items">
+                                    <div class="main-nav--dropdown-link">
+                                        <a href="#">
+                                            <img src="img/best-offer-img.jpg" alt="">
+                                            <div class="main-nav--dropdown-title">Тормозная жидкость</div>
+                                        </a>
+                                    </div>
+                                    <div class="main-nav--dropdown-link">
+                                        <a href="#">
+                                            <img src="img/best-offer-img.jpg" alt="">
+                                            <div class="main-nav--dropdown-title">Жидкость для спец. техники</div>
+                                        </a>
+                                    </div>
+                                    <div class="main-nav--dropdown-link">
+                                        <a href="#">
+                                            <img src="img/best-offer-img.jpg" alt="">
+                                            <div class="main-nav--dropdown-title">Масло для ГУР</div>
+                                        </a>
+                                    </div>
+                                    <div class="main-nav--dropdown-link">
+                                        <a href="#">
+                                            <img src="img/best-offer-img.jpg" alt="">
+                                            <div class="main-nav--dropdown-title">Индустриальное масло</div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="main-nav--dropdown-img">
+                                    <img src="img/best-offer-img.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-nav--dropdown">
+                        <a href="">Охлаждающая<br> жидкость</a>
+                        <div class="main-nav--dropdown-content">
+                            <div class="main-nav--dropdown-wrap">
+                                <div class="main-nav--dropdown-items">
+                                    <div class="main-nav--dropdown-link">
+                                        <a href="#">
+                                            <img src="img/best-offer-img.jpg" alt="">
+                                            <div class="main-nav--dropdown-title">Готовая к использованию охлождающая жидкость</div>
+                                        </a>
+                                    </div>
+                                    <div class="main-nav--dropdown-link">
+                                        <a href="#">
+                                            <img src="img/best-offer-img.jpg" alt="">
+                                            <div class="main-nav--dropdown-title">Концентрированная охлождающая жидкость</div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="main-nav--dropdown-img">
+                                    <img src="img/best-offer-img.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-nav--dropdown">
+                        <a href="">Автохимия</a>
+                        <div class="main-nav--dropdown-content">
+                            <div class="main-nav--dropdown-wrap">
+                                <div class="main-nav--dropdown-items">
+                                    <div class="main-nav--dropdown-link">
+                                        <a href="#">
+                                            <img src="img/best-offer-img.jpg" alt="">
+                                            <div class="main-nav--dropdown-title">Для системы охлаждения</div>
+                                        </a>
+                                    </div>
+                                    <div class="main-nav--dropdown-link">
+                                        <a href="#">
+                                            <img src="img/best-offer-img.jpg" alt="">
+                                            <div class="main-nav--dropdown-title">Для топливной системы автомобиля</div>
+                                        </a>
+                                    </div>
+                                    <div class="main-nav--dropdown-link">
+                                        <a href="#">
+                                            <img src="img/best-offer-img.jpg" alt="">
+                                            <div class="main-nav--dropdown-title">Для тормозной системы автомобиля</div>
+                                        </a>
+                                    </div>
+                                    <div class="main-nav--dropdown-link">
+                                        <a href="#">
+                                            <img src="img/best-offer-img.jpg" alt="">
+                                            <div class="main-nav--dropdown-title">Для салона автомобиля</div>
+                                        </a>
+                                    </div>
+                                    <div class="main-nav--dropdown-link">
+                                        <a href="#">
+                                            <img src="img/best-offer-img.jpg" alt="">
+                                            <div class="main-nav--dropdown-title">Для двигателя автомобиля</div>
+                                        </a>
+                                    </div>
+                                    <div class="main-nav--dropdown-link">
+                                        <a href="#">
+                                            <img src="img/best-offer-img.jpg" alt="">
+                                            <div class="main-nav--dropdown-title">Для кузова автомобиля</div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="main-nav--dropdown-img">
+                                    <img src="img/best-offer-img.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-nav--dropdown">
+                        <a href="">Бренды</a>
+                        <div class="main-nav--dropdown-content">
+                            <div class="main-nav--dropdown-wrap">
+                                <div class="main-nav--dropdown-items">
+                                    <div class="main-nav--dropdown-link_brands">
+                                        <a href="#">Бренд</a>
+                                    </div>
+                                    <div class="main-nav--dropdown-link_brands">
+                                        <a href="#">Бренд</a>
+                                    </div>
+                                    <div class="main-nav--dropdown-link_brands">
+                                        <a href="#">Бренд</a>
+                                    </div>
+                                    <div class="main-nav--dropdown-link_brands">
+                                        <a href="#">Бренд</a>
+                                    </div>
+                                    <div class="main-nav--dropdown-link_brands">
+                                        <a href="#">Бренд</a>
+                                    </div>
+                                    <div class="main-nav--dropdown-link_brands">
+                                        <a href="#">Бренд</a>
+                                    </div>
+                                    <div class="main-nav--dropdown-link_brands">
+                                        <a href="#">Бренд</a>
+                                    </div>
+                                    <div class="main-nav--dropdown-link_brands">
+                                        <a href="#">Бренд</a>
+                                    </div>
+                                    <div class="main-nav--dropdown-link_brands">
+                                        <a href="#">Бренд</a>
+                                    </div>
+                                    <div class="main-nav--dropdown-link_brands">
+                                        <a href="#">Бренд</a>
+                                    </div>
+                                    <div class="main-nav--dropdown-link_brands">
+                                        <a href="#">Бренд</a>
+                                    </div>
+                                    <div class="main-nav--dropdown-link_brands">
+                                        <a href="#">Бренд</a>
+                                    </div>
+                                    <div class="main-nav--dropdown-link_brands">
+                                        <a href="#">Бренд</a>
+                                    </div>
+                                    <div class="main-nav--dropdown-link_brands">
+                                        <a href="#">Бренд</a>
+                                    </div>
+                                    <div class="main-nav--dropdown-link_brands">
+                                        <a href="#">Бренд</a>
+                                    </div>
+                                    <div class="main-nav--dropdown-link_brands">
+                                        <a href="#">Бренд</a>
+                                    </div>
+                                </div>
+                                <div class="main-nav--dropdown-img">
+                                    <img src="img/best-offer-img.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-inline-block">
                     <a href="" class="_sale">Скидки</a>
                 </div>
             </div>
@@ -100,6 +337,20 @@
                     <input type="text" class="form-control" placeholder="Поиск">
                     <div class="input-group-append">
                         <button class="btn" type="button"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="search-result">
+                        <div class="search-result--item">
+                            <a href="#">Helix</a>
+                        </div>
+                        <div class="search-result--item">
+                            <a href="#">Helix</a>
+                        </div>
+                        <div class="search-result--item">
+                            <a href="#">Helix</a>
+                        </div>
+                        <div class="search-result--item">
+                            <a href="#">Helix</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -119,7 +370,7 @@
                     <a href="#">HC-синтетическое</a>
                 </li>
                 <li>
-                    <a href="#">Минеральное</a>
+                    <a href="category.html">Минеральное</a>
                 </li>
                 <li>
                     <a href="#">Полусинтетическое</a>
@@ -208,6 +459,21 @@
         <li>
             <a href="#">Все акции</a>
         </li>
+        <li class="_auth">
+            <div class="_border">
+                <a href="#" class="d-none">Войти</a>
+                <div>Здравствуйте, <span>Имя</span></div>
+                <a href="#" class="logged-in">Выйти</a>
+            </div>
+            <ul>
+                <li>
+                    <a href="#">Мои заказы</a>
+                </li>
+                <li>
+                    <a href="#">Мои данные</a>
+                </li>
+            </ul>
+        </li>
     </ul>
 </nav>
 <div class="mobile-version z-index-100">
@@ -232,10 +498,7 @@
                 <div class="col-4 text-right align-self-center">
                     <ul class="list-inline mb-0">
                         <li class="list-inline-item">
-                            <a href=""><i class="far fa-heart"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href=""><img src="img/mobile/mobile-cart.jpg" alt=""></a>
+                            <a href="cart.html"><img src="img/mobile/mobile-cart.jpg" alt=""></a>
                         </li>
                     </ul>
                 </div>
@@ -299,7 +562,7 @@
                     <div class="form-group row">
                         <label class="col-sm-3 col-form-label">Телефон</label>
                         <div class="col-sm-9 col-md-6">
-                            <input type="tel" class="form-control">
+                            <input type="tel" name="tel" class="form-control tel">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -377,7 +640,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-3 offset-lg-1 mt-5 mt-lg-0">
+            <div class="col-12 col-lg-3 offset-lg-1 mt-5 mt-lg-0 d-none d-lg-block">
                 <div class="d-flex align-items-start mb-4">
                     <img class="mr-2" src="img/cart/icon_1.png" alt="">
                     <div>
@@ -452,11 +715,8 @@
                             </div>
                         </div>
                         <div class="checkout-btns">
-                            <div class="mr-3">
-                                <a href=""><i class="far fa-trash-alt mr-2"></i>Удалить</a>
-                            </div>
                             <div class="ml-auto">
-                                <a href="">Добавить в избранное</a>
+                                <a href=""><i class="far fa-trash-alt mr-2"></i>Удалить</a>
                             </div>
                         </div>
                     </div>
@@ -466,77 +726,137 @@
     </div>
 </section>
 
+<section class="seo-text d-none d-lg-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="seo-text--title">
+                    Интернет-магазин автомобильных масел и автокомплектующих
+                </h1>
+                <div class="mb-3">
+                    <div class="seo-text--itemTitle">Огромный выбор</div>
+                    <div class="seo-text--itemDesc">
+                        Интернет-магазин Lamoda.kz – крупнейший в Казахстане каталог модной мужской одежды, обуви, аксессуаров, парфюмов и косметики, а также товаров для спорта.
+                        Совершать покупки на сайте Lamoda.kz можно в два клика. Это просто, удобно и надёжно: в каталоге предлагаются только фирменные товары известных брендов – как массовых, так и премиум-класса.Здесь можно подобрать базовый мужской гардероб на каждый день и украсить его эффектными дизайнерскими аксессуарами.
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="seo-text--itemTitle">Замена масла на месте</div>
+                    <div class="seo-text--itemDesc">
+                        Интернет-магазин Lamoda.kz – крупнейший в Казахстане каталог модной мужской одежды, обуви, аксессуаров, парфюмов и косметики, а также товаров для спорта.
+                        Совершать покупки на сайте Lamoda.kz можно в два клика. Это просто, удобно и надёжно: в каталоге предлагаются только фирменные товары известных брендов – как массовых, так и премиум-класса.Здесь можно подобрать базовый мужской гардероб на каждый день и украсить его эффектными дизайнерскими аксессуарами.
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="seo-text--itemTitle">Оплата и возврат</div>
+                    <div class="seo-text--itemDesc">
+                        Интернет-магазин Lamoda.kz – крупнейший в Казахстане каталог модной мужской одежды, обуви, аксессуаров, парфюмов и косметики, а также товаров для спорта.
+                        Совершать покупки на сайте Lamoda.kz можно в два клика. Это просто, удобно и надёжно: в каталоге предлагаются только фирменные товары известных брендов – как массовых, так и премиум-класса.Здесь можно подобрать базовый мужской гардероб на каждый день и украсить его эффектными дизайнерскими аксессуарами.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="email-subscription">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="email-subscription--title"><span class="text-uppercase">Скидка 10%</span> за подписку</div>
+                <div>на наши новости. <a href="#">Условия акции</a></div>
+                <div class="input-group mt-2">
+                    <input type="text" class="form-control" placeholder="Введите свой e-mail">
+                    <div class="input-group-append">
+                        <button class="btn g-btn-transparent" type="button">Подписаться</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- Footer -->
 <section id="footer">
     <div class="container">
         <div class="row">
-            <div class="col-sm-6 col-lg-3 mb-3 text-center text-sm-left">
+            <div class="col">
                 <div class="footer--logo">
                     <img src="img/logo-footer.png" alt="">
                 </div>
-            </div>
-            <div class="col-sm-6 col-lg-3 mb-3 text-center text-sm-left">
-                    <span class="footer--block-title">
-                        Информация
-                    </span>
                 <ul class="row nav">
                     <li class="nav-item">
-                        <a href="#" class="nav-link js-scroll-trigger">Доставка и оплата</a>
+                        <a href="#" class="nav-link js-scroll-trigger">Центр поддержки</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link js-scroll-trigger">О магазине</a>
+                        <a href="#" class="nav-link js-scroll-trigger">Как оформить заказ</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link js-scroll-trigger">Новости</a>
+                        <a href="#" class="nav-link js-scroll-trigger">Условия доставки</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link js-scroll-trigger">Отзывы о магазине</a>
+                        <a href="#" class="nav-link js-scroll-trigger">Мои заказы</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link js-scroll-trigger">Контакты</a>
+                        <a href="#" class="nav-link js-scroll-trigger">Условия возврата</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link js-scroll-trigger">Публичная оферта</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link js-scroll-trigger">Программа лояльности</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link js-scroll-trigger">О компании</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link js-scroll-trigger">Вакансии</a>
                     </li>
                 </ul>
             </div>
-            <div class="col-sm-6 col-lg-3 mb-3 text-center text-sm-left">
-                    <span class="footer--block-title">
-                        Основные разделы
-                    </span>
-                <ul class="row nav">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link js-scroll-trigger">Моторные масла</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link js-scroll-trigger">Трансмиссионные масла</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link js-scroll-trigger">Охлаждающая жидкость</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link js-scroll-trigger">Мото масла</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link js-scroll-trigger">Автохимия</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link js-scroll-trigger">Автомобильные фильтры</a>
-                    </li>
-                </ul>
+            <div class="col">
+                <div class="footer--block-title">
+                    Мы в соцсетях
+                </div>
+                <div class="footer--social">
+                    <a href="#" class="footer--column-item footer--social-item_fb"></a>
+                    <a href="#" class="footer--column-item footer--social-item_vk"></a>
+                    <a href="#" class="footer--column-item footer--social-item_tw"></a>
+                    <a href="#" class="footer--column-item footer--social-item_youtube"></a>
+                    <a href="#" class="footer--column-item footer--social-item_inst"></a>
+                </div>
             </div>
-            <div class="col-sm-6 col-lg-3 mb-3 text-center text-sm-left">
-                <div class="footer--feedback mb-4">
-                    <a href="#" class="btn g-btn-primary g-btn-size-md">Заказать обратный звонок</a>
+            <div class="col">
+                <div class="footer--block-title">
+                    Способы оплаты
                 </div>
-                <div class="footer--address">
-                    <p class="mb-0"><span class="font-weight-bold">Адрес:</span> г.Алматы , ул Байтурсынова 18</p>
-                    <p class="mb-0"><span class="font-weight-bold">Режим работы:</span> с 10:00 до 19:00 без выходных</p>
-                    <p class="mb-0"><span class="font-weight-bold">Телефон:</span> <a href="tel:">+7(727)000 00 00</a></p>
+                <div class="footer--payment">
+                    <span class="footer--column-item footer--payment-mastercard"></span>
+                    <span class="footer--column-item footer--payment-visa"></span>
+                    <div class="mt-2">
+                        Вы можете оплатить покупки
+                        наличными при получении, либо
+                        выбрать <a href="#">другой способ оплаты</a>.
+                    </div>
                 </div>
-                <div class="g-social">
-                    <ul class="d-inline-block list-inline mb-0">
-                        <li class="list-inline-item"><a href="#"><i class="fab fa-vk"></i></a></li>
-                        <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    </ul>
+            </div>
+            <div class="col">
+                <div class="footer--block-title">
+                    Для мобильных устройств
+                </div>
+                <div class="footer--app">
+                    <a href="#" class="footer--column-item footer--appstore"></a>
+                    <a href="#" class="footer--column-item footer--googleplay"></a>
+                    <div class="mt-2">
+                        В разработке
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="footer--contacts">
+                    <a href="tel:8800 123 45 67" class="footer--contacts-tel">8 800 123 45 67</a>
+                    <p class="mb-0">г.Алматы , ул Байтурсынова 18</p>
+                    <p class="mb-0">Режим работы: с 10:00 до 19:00</p>
+                    <p class="mb-0">Телефон: <a href="tel:">+7(727)000 00 00</a></p>
                 </div>
             </div>
         </div>
@@ -552,6 +872,7 @@
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- Custom scripts for this template -->
+<script src="vendor/jquery/mask.js"></script>
 <script src="js/project.min.js"></script>
 </body>
 

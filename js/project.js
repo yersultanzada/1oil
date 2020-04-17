@@ -3,10 +3,12 @@ $(document).ready(function () {
   $('#dismiss, .overlay').on('click', function () {
     $('#sidebar').removeClass('active');
     $('.overlay').removeClass('active');
+    $('body').removeClass('js-no-scroll');
   });
   $('#sidebarCollapse').on('click', function () {
     $('#sidebar').addClass('active');
     $('.overlay').addClass('active');
+    $('body').addClass('js-no-scroll');
     $('.collapse.in').toggleClass('in');
     $('a[aria-expanded=true]').attr('aria-expanded', 'false');
   });
@@ -76,7 +78,13 @@ $(document).ready(function () {
         items:2,
         nav:false
       },
-      900:{
+      576:{
+        items:3
+      },
+      768:{
+        items:4
+      },
+      992:{
         items:6
       }
     }
@@ -99,7 +107,10 @@ $(document).ready(function () {
         items:2,
         nav:false
       },
-      900:{
+      768:{
+        items:3
+      },
+      992:{
         items:4
       }
     }
@@ -151,10 +162,16 @@ $(document).ready(function () {
     ],
     responsive:{
       0:{
-        items:3,
+        items:2,
         nav:false
       },
+      576:{
+        items:3
+      },
       900:{
+        items:4
+      },
+      1200:{
         items:6
       }
     }
@@ -183,7 +200,15 @@ $(document).ready(function () {
     navText: [
       "<i class=\"fas fa-chevron-left\"></i>",
       "<i class=\"fas fa-chevron-right\"></i>"
-    ]
+    ],
+    responsive:{
+      0:{
+        items:1
+      },
+      576:{
+        items:2
+      }
+    }
   });
   //клик подробнее в стр товара
   $("#product-card .card-desc--btn").on('click', function () {

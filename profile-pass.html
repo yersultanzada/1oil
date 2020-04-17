@@ -382,7 +382,7 @@
                     <a href="#">HC-синтетическое</a>
                 </li>
                 <li>
-                    <a href="#">Минеральное</a>
+                    <a href="category.html">Минеральное</a>
                 </li>
                 <li>
                     <a href="#">Полусинтетическое</a>
@@ -471,6 +471,21 @@
         <li>
             <a href="#">Все акции</a>
         </li>
+        <li class="_auth">
+            <div class="_border">
+                <a href="#" class="d-none">Войти</a>
+                <div>Здравствуйте, <span>Имя</span></div>
+                <a href="#" class="logged-in">Выйти</a>
+            </div>
+            <ul>
+                <li>
+                    <a href="#">Мои заказы</a>
+                </li>
+                <li>
+                    <a href="#">Мои данные</a>
+                </li>
+            </ul>
+        </li>
     </ul>
 </nav>
 <div class="mobile-version z-index-100">
@@ -495,10 +510,7 @@
                 <div class="col-4 text-right align-self-center">
                     <ul class="list-inline mb-0">
                         <li class="list-inline-item">
-                            <a href=""><i class="far fa-heart"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href=""><img src="img/mobile/mobile-cart.jpg" alt=""></a>
+                            <a href="cart.html"><img src="img/mobile/mobile-cart.jpg" alt=""></a>
                         </li>
                     </ul>
                 </div>
@@ -571,37 +583,37 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-7">
+            <div class="col-lg-7 mt-5 mt-lg-0">
                 <div class="profile-title">
                     Изменить пароль
                 </div>
                 <form action="">
                     <div class="form-row">
-                        <div class="form-group col-lg-4">
+                        <div class="form-group col-sm-6 col-xl-4">
                             <label class="col-form-label">Введите текущий пароль</label>
                         </div>
-                        <div class="form-group col-lg-4">
+                        <div class="form-group col-sm-6 col-xl-4">
                             <input type="text" name="current_pass" class="form-control">
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group col-lg-4">
+                        <div class="form-group col-sm-6 col-xl-4">
                             <label class="col-form-label">Введите новый пароль</label>
                         </div>
-                        <div class="form-group col-lg-4">
+                        <div class="form-group col-sm-6 col-xl-4">
                             <input type="text" name="new_pass" class="form-control">
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group col-lg-4">
+                        <div class="form-group col-sm-6 col-xl-4">
                             <label class="col-form-label">И повторите его</label>
                         </div>
-                        <div class="form-group col-lg-4">
+                        <div class="form-group col-sm-6 col-xl-4">
                             <input type="text" name="repeat_pass" class="form-control">
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group col-lg-8 ml-auto mt-3">
+                        <div class="form-group col-8 ml-auto mt-3">
                             <button type="submit" class="btn disabled">Сохранить</button>
                         </div>
                     </div>

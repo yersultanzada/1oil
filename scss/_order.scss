@@ -45,11 +45,9 @@
     }
     .card--price, .card--date {
       color: $gray;
-      text-align: right;
       font-family: 'CoFo Sans Lamoda Bold',sans-serif;
     }
     .card--state {
-      text-align: right;
       .card--status {
         font-family: 'CoFo Sans Lamoda Bold',sans-serif;
         &.status-delivered {
@@ -109,6 +107,7 @@
     }
     .order-solo--tableR a {
       color: $blue;
+      font-family: 'CoFo Sans Lamoda Bold',sans-serif;
     }
   }
   &--product {
@@ -126,5 +125,15 @@
         object-fit: cover;
       }
     }
+  }
+}
+@media (max-width: 575px) {
+  .order-all .nav-tabs .nav-item .nav-link {
+    font-size: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .order-all--card .card--price, .order-all--card .card--date, .order-all--card .card--state {
+    text-align: right;
   }
 }

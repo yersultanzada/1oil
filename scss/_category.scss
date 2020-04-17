@@ -358,7 +358,7 @@ section#category {
         visibility: hidden;
         text-align: center;
         margin-top: 10px;
-        a,button {
+        button {
           color: $gray;
           background-color: transparent;
           border: none;
@@ -379,12 +379,6 @@ section#category {
               background-image: url("../img/category/eye-active.svg");
             }
           }
-        }
-      }
-      &:hover {
-        border: 1px solid #dfdddd;
-        .item--more {
-          visibility: visible;
         }
       }
     }
@@ -595,7 +589,13 @@ section#category {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
+  section#category .category--items .category-item--card:hover {
+    border: 1px solid #dfdddd;
+    .item--more {
+      visibility: visible;
+    }
+  }
   #categoryModal .modal-dialog {
     max-width: 625px;
   }

@@ -382,7 +382,7 @@
                     <a href="#">HC-синтетическое</a>
                 </li>
                 <li>
-                    <a href="#">Минеральное</a>
+                    <a href="category.html">Минеральное</a>
                 </li>
                 <li>
                     <a href="#">Полусинтетическое</a>
@@ -471,6 +471,21 @@
         <li>
             <a href="#">Все акции</a>
         </li>
+        <li class="_auth">
+            <div class="_border">
+                <a href="#" class="d-none">Войти</a>
+                <div>Здравствуйте, <span>Имя</span></div>
+                <a href="#" class="logged-in">Выйти</a>
+            </div>
+            <ul>
+                <li>
+                    <a href="#">Мои заказы</a>
+                </li>
+                <li>
+                    <a href="#">Мои данные</a>
+                </li>
+            </ul>
+        </li>
     </ul>
 </nav>
 <div class="mobile-version z-index-100">
@@ -495,10 +510,7 @@
                 <div class="col-4 text-right align-self-center">
                     <ul class="list-inline mb-0">
                         <li class="list-inline-item">
-                            <a href=""><i class="far fa-heart"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href=""><img src="img/mobile/mobile-cart.jpg" alt=""></a>
+                            <a href="cart.html"><img src="img/mobile/mobile-cart.jpg" alt=""></a>
                         </li>
                     </ul>
                 </div>
@@ -571,51 +583,51 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-7">
+            <div class="col-lg-7 mt-5 mt-lg-0">
                 <div class="profile-title">
                     Мои данные
                 </div>
                 <form action="">
                     <div class="form-row">
-                        <div class="form-group col-lg-4">
+                        <div class="form-group col-sm-4">
                             <input type="text" name="last_name" class="form-control" placeholder="Фамилия" value="Hello">
                         </div>
-                        <div class="form-group col-lg-4">
+                        <div class="form-group col-sm-4">
                             <input type="text" name="first_name" class="form-control" placeholder="Имя">
                         </div>
-                        <div class="form-group col-lg-4">
+                        <div class="form-group col-sm-4">
                             <input type="text" name="middle_name" class="form-control" placeholder="Отчество">
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group col-lg-4">
+                        <div class="form-group col-6 col-sm-4">
                             <label class="col-form-label">Ваш e-mail</label>
                         </div>
-                        <div class="form-group col-lg-4">
+                        <div class="form-group col-6 col-sm-4">
                             <input type="email" name="email" class="form-control-plaintext" value="example@gmail.com" readonly>
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group col-lg-4">
+                        <div class="form-group col-6 col-sm-4">
                             <label class="col-form-label">Пароль</label>
                         </div>
-                        <div class="form-group col-lg-4">
+                        <div class="form-group col-6 col-sm-4">
                             <a href="profile-pass.html" class="btn g-btn-transparent">Изменить</a>
                         </div>
                     </div>
                     <div class="form-row mt-5">
-                        <div class="form-group col-lg-4">
+                        <div class="form-group col-5 col-sm-4 col-md-4">
                             <label class="col-form-label">Телефон</label>
                         </div>
-                        <div class="form-group col-lg-4">
+                        <div class="form-group col-7 col-sm-6 col-md-4">
                             <input type="tel" name="tel" class="form-control tel" placeholder="+7">
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group col-lg-4">
+                        <div class="form-group col-sm-4">
                             <label class="col-form-label">Дата рожления</label>
                         </div>
-                        <div class="form-group col-lg-8">
+                        <div class="form-group col-sm-8">
                             <select id="birthDay">
                                 <option value="">день</option>
                                 <option value="1">1</option>
@@ -701,10 +713,10 @@
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group col-lg-4">
+                        <div class="form-group col-3 col-sm-4">
                             <label class="col-form-label">Пол</label>
                         </div>
-                        <div class="form-group col-lg-8">
+                        <div class="form-group col-9 col-sm-8">
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="man" value="option1">
                                 <label class="form-check-label" for="man">Мужской</label>
@@ -716,7 +728,7 @@
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group col-lg-8 ml-auto mt-3">
+                        <div class="form-group col-8 col-sm-8 ml-auto mt-3">
                             <button type="submit" class="btn">Сохранить</button>
                         </div>
                     </div>

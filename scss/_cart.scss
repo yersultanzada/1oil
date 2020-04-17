@@ -10,8 +10,9 @@
     .form-group {
       margin-bottom: 1.5rem;
       font-weight: bold;
-      .form-control {
+      input.form-control {
         background-color: transparent;
+        height: calc(1.9rem + 2px);
       }
       .custom-control {
         font-weight: normal;
